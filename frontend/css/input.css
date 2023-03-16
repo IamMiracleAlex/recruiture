@@ -77,10 +77,6 @@ This declarations assume that the generated css file lives in thesame directory 
   }
 }
 
-/* @layer utilities{
-  .
-} */
-
 /* temporary debuggers*/
 .red {
   outline: 2px solid red;

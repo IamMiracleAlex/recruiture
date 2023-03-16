@@ -3,9 +3,10 @@ module.exports = {
   content: ["./html/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      "switzer-reg": ['"Switzer-Regular"'],
+      "satoshi-bold": ['"Satoshi-Bold"'],
       "satoshi-black": ['"Satoshi-Black"'],
-      "switzer-bold": ['"Satoshi-Bold"'],
+      "switzer-reg": ['"Switzer-Regular"'],
+      "switzer-med": ['"Switzer-Medium"'],
     },
     extend: {},
   },
