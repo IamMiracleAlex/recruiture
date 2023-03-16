@@ -15,20 +15,23 @@
 
   <body>
     <nav
-      class="flex flex-col md:flex-row items-center justify-between py-3 md:py-1 px-5 md:px-10 md:min-h-[94px] green"
+      class="flex flex-col md:flex-row items-center justify-between py-3 md:py-1 px-4 sm:px-6 md:px-5 lg:px-10 xl:px-16 md:min-h-[90px] nav__shadow"
     >
       <!--nav logo and nav button -->
-      <section class="flex w-full md:w-max justify-between blue">
+      <section class="flex w-full md:w-max xl:w-[33%] justify-between">
         <!-- navbar logo mobile-screen -->
-        <div class="md:hidden flex flex-col">
-          <p class="relative text-3xl font-bold text-blue-900 w-max">
-            Re<span class="text-green-600">cruit</span>ure
+        <a href="/" class="md:hidden flex flex-col">
+          <p
+            class="relative text-2xl sm:text-3xl font-bold text-blue-800 w-max"
+          >
+            Re<span class="text-[var(--color-dark-green)]">cruit</span>ure
           </p>
 
-          <small class="text-[10px] font-bold text-gray-700 -mt-[2px]"
+          <small
+            class="text-[10px] sm:text-[11px] font-switzer-reg text-[var(--color-daek-blue)] -mt-[3px]"
             >By Edubridge Academy</small
           >
-        </div>
+        </a>
 
         <!-- nav hamburger icon. availaible on mobile only -->
         <button class="md:hidden">
@@ -38,7 +41,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-8 h-8"
           >
             <path
               stroke-linecap="round"
@@ -49,37 +52,66 @@
         </button>
 
         <!-- navbar logo medium and larger screen -->
-        <div class="h-[85px] hidden md:block">
+        <a href="/" class="h-[65px] lg:h-[85px] hidden md:block">
           <img
             class="w-auto"
             src="../../asssets/recruiture-logo-svg.svg"
             alt="recruiture's logo icon"
           />
-        </div>
+        </a>
       </section>
 
       <!-- nav icons (about employer blog) -->
-      <ul class="hidden md:flex space-x-3">
+      <ul class="hidden gap-5 md:w-[33%] md:flex xl:gap-16 justify-center">
         <li>
-          <a href="/about">About</a>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="/about"
+            >About</a
+          >
         </li>
 
         <li>
-          <a href="/employer">Employer</a>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="/employer"
+            >Employer</a
+          >
         </li>
 
         <li>
-          <a href="/blog">Blog</a>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="/blog"
+            >Blog</a
+          >
         </li>
       </ul>
 
       <!-- nav nav-buttons (getcertified hire a talent) -->
-      <div class="hidden md:block">
-        <button>Get certified</button>
-        <button>Hire a Talent</button>
+      <div class="hidden justify-end md:flex gap-5 xl:w-[33%]">
+        <a
+          class="flex justify-center items-center transition-colors duration-200 text-[clamp(16px,2vw,20px)] text-[var(--color-dark-blue)] hover:text-white hover:bg-[var(--color-medium-green)] tracking-wide py-2 px-3 lg:py-3 rounded-md border-2 border-gray-500 hover:border-[var(--color-medium-green)]"
+          href="https://edubridgeacademy.com/"
+          class=""
+          >Get certified</a
+        >
+
+        <a
+          class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 lg:py-3 rounded-md"
+          href="#"
+          >Hire a Talent</a
+        >
       </div>
     </nav>
 
-    <h1 class="font-satoshi-black text-3xl">Hello here</h1>
+    <main class="red">
+      <!-- banner -->
+      <section class="green md:h-[calc(100vh-95px)] h-max"></section>
+    </main>
+
+    <footer>
+      <!-- <h1 class="font-satoshi-black text-3xl">Hello here</h1> -->
+    </footer>
   </body>
 </html>

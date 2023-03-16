@@ -2,9 +2,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 /*  Custom fonts declaration
-fonts url are declared relatively to the fonts folder and assumes that .
+fonts url are declared relatively to the fonts folder.
 If the postcss file generarted lives in a different directory, then this declarations won't work.
-This declarations assume that the generated css file lives in thesame directory as this current file
+This declarations assumes that the generated css file lives in thesame directory as this current file
 */
 @font-face {
   font-family: "Switzer-Regular";
@@ -62,7 +62,21 @@ This declarations assume that the generated css file lives in thesame directory 
 @tailwind components;
 @tailwind utilities;
 
+/* find variables and default elements styles here */
 @layer base {
+  :root {
+    --color-dark-blue: #000d18;
+    --color-light-green: #ccf57a;
+    --color-medium-green: #a2cc4f;
+    --color-dark-green: #81ab25;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
     font-family: "Switzer-Medium", ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
@@ -71,12 +85,24 @@ This declarations assume that the generated css file lives in thesame directory 
     scroll-behavior: smooth;
   }
 
+  body {
+    max-width: 1536px;
+    @apply mx-auto;
+  }
+
   img {
     width: 100%;
     height: 100%;
   }
 }
 
+.color {
+  color: #000d18;
+}
+
+.nav__shadow {
+  box-shadow: 6px 3px 8px rgba(0, 0, 0, 0.05);
+}
 /* temporary debuggers*/
 .red {
   outline: 2px solid red;
