@@ -1,0 +1,93 @@
+/* Bootsrap icons cdn link */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/*  Custom fonts declaration
+fonts url are declared relatively to the fonts folder and assumes that .
+If the postcss file generarted lives in a different directory, then this declarations won't work.
+This declarations assume that the generated css file lives in thesame directory as this current file
+*/
+@font-face {
+  font-family: "Switzer-Regular";
+  src: url("../fonts/switzer/Switzer-Regular.woff2") format("woff2"),
+    url("../fonts/switzer/Switzer-Regular.woff") format("woff"),
+    url("../fonts/switzer/Switzer-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Switzer-Medium";
+  src: url("../fonts/switzer/Switzer-Medium.woff2") format("woff2"),
+    url("../fonts/switzer/Switzer-Medium.woff") format("woff"),
+    url("../fonts/switzer/Switzer-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* currently unused font declaration and redundant fontfiles*/
+@font-face {
+  font-family: "Switzer-Bold";
+  src: url("../fonts/switzer/Switzer-Bold.woff2") format("woff2"),
+    url("../fonts/switzer/Switzer-Bold.woff") format("woff"),
+    url("../fonts/switzer/Switzer-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Bold.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../fonts/satoshi/Satoshi-Black.woff2") format("woff2"),
+    url("../fonts/satoshi/Satoshi-Black.woff") format("woff"),
+    url("../fonts/satoshi/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Switzer-Medium", ui-sans-serif, system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    scroll-behavior: smooth;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* @layer utilities{
+  .
+} */
+
+/* temporary debuggers*/
+.red {
+  outline: 2px solid red;
+}
+.blue {
+  outline: 2px solid blue;
+}
+.green {
+  outline: 2px solid green;
+}

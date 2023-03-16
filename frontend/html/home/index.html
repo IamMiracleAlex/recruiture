@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../asssets/recruiture-logo-svg.svg"
+      type="image/x-icon"
+    />
+    <title>Recruiture | Edubridge Academy</title>
+  </head>
+
+  <body>
+    <nav
+      class="flex flex-col md:flex-row items-center justify-between py-3 md:py-1 px-5 md:px-10 md:min-h-[94px] green"
+    >
+      <!--nav logo and nav button -->
+      <section class="flex w-full md:w-max justify-between blue">
+        <!-- navbar logo mobile-screen -->
+        <div class="md:hidden flex flex-col">
+          <p class="relative text-3xl font-bold text-blue-900 w-max">
+            Re<span class="text-green-600">cruit</span>ure
+          </p>
+
+          <small class="text-[10px] font-bold text-gray-700 -mt-[2px]"
+            >By Edubridge Academy</small
+          >
+        </div>
+
+        <!-- nav hamburger icon. availaible on mobile only -->
+        <button class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
+        </button>
+
+        <!-- navbar logo medium and larger screen -->
+        <div class="h-[85px] hidden md:block">
+          <img
+            class="w-auto"
+            src="../../asssets/recruiture-logo-svg.svg"
+            alt="recruiture's logo icon"
+          />
+        </div>
+      </section>
+
+      <!-- nav icons (about employer blog) -->
+      <ul class="hidden md:flex space-x-3">
+        <li>
+          <a href="/about">About</a>
+        </li>
+
+        <li>
+          <a href="/employer">Employer</a>
+        </li>
+
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+
+      <!-- nav nav-buttons (getcertified hire a talent) -->
+      <div class="hidden md:block">
+        <button>Get certified</button>
+        <button>Hire a Talent</button>
+      </div>
+    </nav>
+  </body>
+</html>

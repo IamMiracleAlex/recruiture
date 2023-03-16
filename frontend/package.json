@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss -o style.css src/*.css -w"
+    "dev": "postcss -o css/style.css css/input.css -w"
   },
   "keywords": [],
   "author": "",
