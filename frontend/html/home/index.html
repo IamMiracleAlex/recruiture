@@ -14,8 +14,9 @@
   </head>
 
   <body>
+    <!-- ------------- Nav bar -------------- -->
     <nav
-      class="flex flex-col md:flex-row items-center justify-between py-3 md:py-1 px-4 sm:px-6 md:px-5 lg:px-10 xl:px-16 md:min-h-[90px] nav__shadow"
+      class="flex flex-col md:flex-row items-center justify-between py-3 md:py-1 px-4 sm:px-6 md:px-5 lg:px-10 xl:px-16 md:min-h-[90px] bg-white nav__shadow"
     >
       <!--nav logo and nav button -->
       <section class="flex w-full md:w-max xl:w-[33%] justify-between">
@@ -28,7 +29,7 @@
           </p>
 
           <small
-            class="text-[10px] sm:text-[11px] font-switzer-reg text-[var(--color-daek-blue)] -mt-[3px]"
+            class="text-[10px] sm:text-[11px] font-switzer-reg text-[var(--color-dark-blue)] -mt-[3px]"
             >By Edubridge Academy</small
           >
         </a>
@@ -91,23 +92,156 @@
       <!-- nav nav-buttons (getcertified hire a talent) -->
       <div class="hidden justify-end md:flex gap-5 xl:w-[33%]">
         <a
-          class="flex justify-center items-center transition-colors duration-200 text-[clamp(16px,2vw,20px)] text-[var(--color-dark-blue)] hover:text-white hover:bg-[var(--color-medium-green)] tracking-wide py-2 px-3 lg:py-3 rounded-md border-2 border-gray-500 hover:border-[var(--color-medium-green)]"
+          class="flex justify-center items-center transition-colors duration-200 text-[clamp(16px,2vw,20px)] text-[var(--color-dark-blue)] hover:text-white hover:bg-[var(--color-medium-green)] tracking-wide py-2 px-3 rounded-md border-2 border-gray-500 hover:border-[var(--color-medium-green)]"
           href="https://edubridgeacademy.com/"
           class=""
           >Get certified</a
         >
 
         <a
-          class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 lg:py-3 rounded-md"
+          class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
           href="#"
           >Hire a Talent</a
         >
       </div>
     </nav>
 
-    <main class="red">
-      <!-- banner -->
-      <section class="green md:h-[calc(100vh-95px)] h-max"></section>
+    <!-- ------------- SideBar -------------- -->
+
+    <main>
+      <!-- -------------- Banner -------------- -->
+      <section class="relative h-max md:h-screen">
+        <!-- banner image wrapper -->
+        <div
+          aria-hidden="true"
+          class="absolute z-[1] h-[50vh] md:h-[unset] left-0 right-0 md:bottom-0 top-0"
+        >
+          <img
+            src="../../asssets/home/home-banner.png"
+            alt="Recruiture home page banner image"
+          />
+        </div>
+
+        <!-- banner contents wrapper-->
+        <div class="relative z-10">
+          <!-- banner headers/texts -->
+          <div
+            class="flex flex-col justify-center items-center w-full max-w-[1000px] mx-auto text-white text-center px-5 py-10 md:px-10 md:py-0 md:h-[calc(100vh-200px)] h-max"
+          >
+            <h1
+              class="text-[clamp(25px,3.5vw,64px)] leading-[clamp(2rem,4vw,64px)] font-satoshi-black"
+            >
+              Your organization is one talent away from optimum
+              <span class="text-[var(--color-light-green)]">performance</span>
+            </h1>
+            <p
+              class="text-[clamp(15px,1.5vw,20px)] text-[rgba(255,255,255,0.8)] mt-3 sm:mt-5 mx-auto"
+            >
+              Recruiture will help you onboard the best trained talents in the
+              shortest time possible.
+            </p>
+
+            <button
+              class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5"
+            >
+              Get started
+            </button>
+          </div>
+
+          <!-- banner boxes/counters -->
+          <div
+            class="home__card__shadow min-h-[250px] md:w-[80%] max-w-[1024px] mx-auto bg-white h-max p-2"
+          >
+            <div class="flex">
+              <article
+                class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
+              >
+                <h3
+                  class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
+                >
+                  10k+
+                </h3>
+                <p
+                  class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
+                >
+                  Alumni in UK, US, Nigeria & Africa
+                </p>
+              </article>
+
+              <article
+                class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
+              >
+                <h3
+                  class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
+                >
+                  5,000
+                </h3>
+                <p
+                  class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
+                >
+                  Graduates trained and placed in jobs
+                </p>
+              </article>
+            </div>
+
+            <div class="flex">
+              <article
+                class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
+              >
+                <h3
+                  class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
+                >
+                  18
+                </h3>
+                <p
+                  class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
+                >
+                  University student commuinities across the country
+                </p>
+              </article>
+
+              <article
+                class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
+              >
+                <h3
+                  class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
+                >
+                  Top 10
+                </h3>
+                <p
+                  class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
+                >
+                  Investment Firms in the world have at least one product of our
+                  academy
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------- Our Services ----------- -->
+      <section
+        class="bg-[#FBFBFB] px-5 pt-7 md:pt-[210px] lg:pt-[220px] xl:pt-[230px] h-[500px] yellow"
+      >
+        <!-- our services wrapper -->
+        <div class="mx-auto max-w-7xl">
+          <!-- heading (Our services) -->
+          <p
+            class="bg-[rgba(17,47,73,0.03)] py-3 px-9 mt-5 xl:mt-10 w-max rounded-[40px] font-satoshi-bold text-[clamp(20px,2.7vw,40px)] text-[var(--color-medium-blue)]"
+          >
+            Our services
+          </p>
+
+          <!--services cards  -->
+          <div>
+            <!-- text-wrapper -->
+            <div></div>
+            <!-- image wrapper -->
+            <div></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>

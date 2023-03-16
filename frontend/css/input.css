@@ -65,6 +65,8 @@ This declarations assumes that the generated css file lives in thesame directory
 /* find variables and default elements styles here */
 @layer base {
   :root {
+    --color-light-blue: #112f49;
+    --color-medium-blue: #0b1c2c;
     --color-dark-blue: #000d18;
     --color-light-green: #ccf57a;
     --color-medium-green: #a2cc4f;
@@ -97,16 +99,70 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 .color {
-  color: #000d18;
+  color: #0b1c2c;
+  color: rgba(11, 28, 44, 0.7);
 }
 
+/* custom utility classes */
 .nav__shadow {
   box-shadow: 6px 3px 8px rgba(0, 0, 0, 0.05);
 }
+
+.home__card__shadow {
+  box-shadow: 0px 14px 25px 5px rgba(0, 0, 0, 0.03);
+}
+
+.hide__scroll__bar::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 50, 59);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: gray;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 50, 59);
+  }
+}
+
 /* temporary debuggers*/
 .red {
   outline: 2px solid red;
 }
+
+.yellow {
+  outline: 4px solid yellow;
+}
+
 .blue {
   outline: 2px solid blue;
 }
