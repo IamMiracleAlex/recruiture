@@ -2,9 +2,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 /*  Custom fonts declaration
-fonts url are declared relatively to the fonts folder and assumes that .
+fonts url are declared relatively to the fonts folder.
 If the postcss file generarted lives in a different directory, then this declarations won't work.
-This declarations assume that the generated css file lives in thesame directory as this current file
+This declarations assumes that the generated css file lives in thesame directory as this current file
 */
 @font-face {
   font-family: "Switzer-Regular";
@@ -62,7 +62,23 @@ This declarations assume that the generated css file lives in thesame directory 
 @tailwind components;
 @tailwind utilities;
 
+/* find variables and default elements styles here */
 @layer base {
+  :root {
+    --color-light-blue: #112f49;
+    --color-medium-blue: #0b1c2c;
+    --color-dark-blue: #000d18;
+    --color-light-green: #ccf57a;
+    --color-medium-green: #a2cc4f;
+    --color-dark-green: #81ab25;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
     font-family: "Switzer-Medium", ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
@@ -71,9 +87,71 @@ This declarations assume that the generated css file lives in thesame directory 
     scroll-behavior: smooth;
   }
 
+  body {
+    max-width: 1536px;
+    @apply mx-auto;
+  }
+
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.color {
+  color: #112f49;
+  color: #0b1c2c;
+  color: #10273a;
+}
+
+/* custom utility classes */
+.nav__shadow {
+  box-shadow: 6px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.home__card__shadow {
+  box-shadow: 0px 14px 25px 5px rgba(0, 0, 0, 0.03);
+}
+
+.hide__scroll__bar::-webkit-scrollbar {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 50, 59);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: gray;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 50, 59);
   }
 }
 
@@ -81,6 +159,11 @@ This declarations assume that the generated css file lives in thesame directory 
 .red {
   outline: 2px solid red;
 }
+
+.yellow {
+  outline: 4px solid yellow;
+}
+
 .blue {
   outline: 2px solid blue;
 }
