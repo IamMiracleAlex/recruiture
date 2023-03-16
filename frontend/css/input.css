@@ -99,8 +99,9 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 .color {
+  color: #112f49;
   color: #0b1c2c;
-  color: rgba(11, 28, 44, 0.7);
+  color: #10273a;
 }
 
 /* custom utility classes */
