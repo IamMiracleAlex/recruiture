@@ -11,6 +11,7 @@
       type="image/x-icon"
     />
     <title>Recruiture | Edubridge Academy</title>
+    <script type="module" src="./index.js" defer></script>
   </head>
 
   <body>
@@ -660,7 +661,7 @@
       </section>
 
       <!-- ----------- Testimonials ----------- -->
-      <section class="bg-white py-10 px-5 relative">
+      <section class="bg-white py-10 px-2 sm:px-5 relative">
         <div class="max-w-6xl mx-auto relative z-10">
           <!-- heading (our testimonials) -->
           <h3
@@ -678,28 +679,58 @@
           </p>
 
           <!-- testimonials wrap -->
-          <div class="mt-16 h-max relative flex justify-center items-start">
-            <!-- bg aspect-square max-h-screen -->
-            <div
-              class="absolute left-0 right-0 top-0 bottom-0 mx-auto z-[1] opacity-50"
-              role="banner"
-              aria-hidden="true"
+          <div
+            class="home__testimony mt-16 h-max relative flex justify-center items-center overflow-hidden bg-white border-x"
+          >
+            <!-- buttons left arrow -->
+            <button
+              data-name="leftArrow"
+              class="text-3xl md:text-5xl absolute left-[20px] z-20 animate-bounce opacity-50"
             >
-              <img
-                class="w-auto testimonial_animate aspect-square max-h-[80vh] mx-auto"
-                src="../../asssets/home/home-testimonials-bg-ring.png"
-                alt=""
-              />
+              <i
+                class="bi bi-arrow-left-circle-fill text-[var(--color-light-blue)]"
+              ></i>
+            </button>
+
+            <!-- buttons right arrow -->
+            <button
+              data-name="rightArrow"
+              class="text-3xl md:text-5xl absolute right-[20px] z-20 animate-bounce opacity-50"
+            >
+              <i
+                class="bi bi-arrow-right-circle-fill text-[var(--color-light-blue)]"
+              ></i>
+            </button>
+
+            <!-- circular indicators -->
+            <div
+              data-name="indicatorWrapper"
+              class="absolute bottom-0 flex space-x-2"
+            >
+              <!-- ------------------------------------ -->
+              <!--       Javascript injects here        -->
+              <!-- ------------------------------------ -->
+              <!-- sample to be injected below -->
+              <!-- <span
+                class="cursor-pointer block h-5 w-5 bg-[var(--color-medium-green)] rounded-full z-20"
+              ></span> -->
             </div>
 
             <!-- content -->
-            <div class="relative justify-between z-10 flex space-x-10">
-              <!-- testimony -->
-              <article
-                class="home__testimonycard home_testimonycard_inactive rounded-xl nav__shadow w-80 p-5 h-max"
+            <div
+              data-name="testimonyWrapper"
+              class="justify-between z-10 flex space-x-2 sm:space-x-5 w-full overflow-x-auto hide__scroll__bar py-10"
+            >
+              <!-- ------------------------------------ -->
+              <!--       >Javascript injects here       -->
+              <!-- ------------------------------------ -->
+
+              <!-- sample to be injected below -->
+              <!-- <article
+                class="home__testimonycard home_testimonycard_active rounded-xl p-5 h-max"
               >
                 <q
-                  class="text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
+                  class="line__clamp__4 text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
                 >
                   Despite graduating with a first class, I struggled to get a
                   job. EduBridge changed my story.
@@ -727,75 +758,7 @@
                     </p>
                   </div>
                 </div>
-              </article>
-
-              <article
-                class="home__testimonycard home_testimonycard_active rounded-xl nav__shadow w-80 p-5 h-max"
-              >
-                <q
-                  class="text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
-                >
-                  Despite graduating with a first class, I struggled to get a
-                  job. EduBridge changed my story.
-                </q>
-
-                <div class="flex items-center space-x-5 mt-5 pt-5 border-t">
-                  <span class="h-16 w-16 rounded-full">
-                    <img
-                      class="rounded-full"
-                      src="../../asssets/recruiture-logo-svg.svg"
-                      alt="temp desccription"
-                    />
-                  </span>
-
-                  <div>
-                    <cite
-                      class="text-[#5D646C] text-[clamp(0.9rem,1.4vw,1.18rem)]"
-                    >
-                      Mosimiloluwa Koye Ladele
-                    </cite>
-                    <p
-                      class="font-extrabold text-[var(--color-medium-blue)] text-[clamp(0.8rem,1.3vw,1.15rem)]"
-                    >
-                      Senior analyst
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <article
-                class="home__testimonycard home_testimonycard_inactive rounded-xl nav__shadow w-80 p-5 h-max"
-              >
-                <q
-                  class="text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
-                >
-                  Despite graduating with a first class, I struggled to get a
-                  job. EduBridge changed my story.
-                </q>
-
-                <div class="flex items-center space-x-5 mt-5 pt-5 border-t">
-                  <span class="h-16 w-16 rounded-full">
-                    <img
-                      class="rounded-full"
-                      src="../../asssets/recruiture-logo-svg.svg"
-                      alt="temp desccription"
-                    />
-                  </span>
-
-                  <div>
-                    <cite
-                      class="text-[#5D646C] text-[clamp(0.9rem,1.4vw,1.18rem)]"
-                    >
-                      Mosimiloluwa Koye Ladele
-                    </cite>
-                    <p
-                      class="font-extrabold text-[var(--color-medium-blue)] text-[clamp(0.8rem,1.3vw,1.15rem)]"
-                    >
-                      Senior analyst
-                    </p>
-                  </div>
-                </div>
-              </article>
+              </article> -->
             </div>
           </div>
         </div>
