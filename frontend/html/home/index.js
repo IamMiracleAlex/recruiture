@@ -34,16 +34,14 @@ let currentCard;
 // functions
 function renderTesimonials(testimonials) {
   const testimonies = testimonials
-    .map((testimony, index) => {
-      let isactive = index === 1;
-      return htmlTestimony(testimony, isactive);
+    .map((testimony) => {
+      return htmlTestimony(testimony);
     })
     .join("");
 
   const indicatorBtns = testimonials
-    .map((x, index) => {
-      let isactive = index === 1;
-      return htmlIndicatorBtn(isactive);
+    .map(() => {
+      return htmlIndicatorBtn();
     })
     .join("");
 
@@ -62,6 +60,8 @@ function renderTesimonials(testimonials) {
       setActiveTestimony(testimony, allIndicatorBtn[index]);
     });
   });
+
+  setActiveTestimony(allTestimonies[1], allIndicatorBtn[1]);
 }
 
 function setActiveTestimony(testimony, btn) {

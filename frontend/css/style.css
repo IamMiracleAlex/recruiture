@@ -638,9 +638,6 @@ img {
 .aspect-\[1\.3\]{
   aspect-ratio: 1.3;
 }
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
 .aspect-video{
   aspect-ratio: 16 / 9;
 }
@@ -649,6 +646,9 @@ img {
 }
 .h-28{
   height: 7rem;
+}
+.h-5{
+  height: 1.25rem;
 }
 .h-8{
   height: 2rem;
@@ -667,17 +667,8 @@ img {
   height: -moz-max-content;
   height: max-content;
 }
-.h-6{
-  height: 1.5rem;
-}
-.h-5{
-  height: 1.25rem;
-}
 .max-h-\[400px\]{
   max-height: 400px;
-}
-.max-h-\[80vh\]{
-  max-height: 80vh;
 }
 .min-h-\[250px\]{
   min-height: 250px;
@@ -687,6 +678,9 @@ img {
 }
 .w-28{
   width: 7rem;
+}
+.w-5{
+  width: 1.25rem;
 }
 .w-8{
   width: 2rem;
@@ -713,12 +707,6 @@ img {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-.w-6{
-  width: 1.5rem;
-}
-.w-5{
-  width: 1.25rem;
 }
 .max-w-3xl{
   max-width: 48rem;
@@ -811,26 +799,21 @@ img {
 .gap-7{
   gap: 1.75rem;
 }
-.space-x-5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-x-1 > :not([hidden]) ~ :not([hidden]){
+.space-x-5 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
-  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden{
   overflow: hidden;
 }
-.overflow-x-auto{
-  overflow-x: auto;
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 .rounded-3xl{
   border-radius: 1.5rem;
@@ -861,9 +844,6 @@ img {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
-.border-\[var\(--color-medium-green\)\]{
-  border-color: var(--color-medium-green);
-}
 .bg-\[\#FBFBFB\]{
   --tw-bg-opacity: 1;
   background-color: rgb(251 251 251 / var(--tw-bg-opacity));
@@ -881,6 +861,12 @@ img {
 .bg-\[var\(--color-dark-green\)\]{
   background-color: var(--color-dark-green);
 }
+.bg-\[var\(--color-medium-blue\)\]{
+  background-color: var(--color-medium-blue);
+}
+.bg-\[var\(--color-medium-green\)\]{
+  background-color: var(--color-medium-green);
+}
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -889,17 +875,15 @@ img {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[var\(--color-medium-green\)\]{
-  background-color: var(--color-medium-green);
-}
-.bg-\[var\(--color-medium-blue\)\]{
-  background-color: var(--color-medium-blue);
-}
 .p-2{
   padding: 0.5rem;
 }
 .p-5{
   padding: 1.25rem;
+}
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .px-3{
   padding-left: 0.75rem;
@@ -928,10 +912,6 @@ img {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 .pb-12{
   padding-bottom: 3rem;
@@ -964,10 +944,6 @@ img {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 .text-\[10px\]{
   font-size: 10px;
@@ -1179,6 +1155,7 @@ img {
 
 .home__testimonycard {
   width: min(90%, 380px);
+  min-width: 270px;
   aspect-ratio: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1207,8 +1184,17 @@ img {
 .home_testimonycard_active {
   -webkit-box-shadow: 1px 1px 20px rgb(221, 221, 221), -1px -1px 20px rgb(221, 221, 221);
           box-shadow: 1px 1px 20px rgb(221, 221, 221), -1px -1px 20px rgb(221, 221, 221);
-  /* @apply drop-shadow-lg; */
-  background-color: white;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 200ms;
+       -o-transition-duration: 200ms;
+          transition-duration: 200ms;
 }
 
 .logos__animate {
@@ -1216,14 +1202,9 @@ img {
           animation: logos__animate 36s linear infinite;
 }
 
-.testimonial_animate {
-  -webkit-animation: testimonial_animate 30s linear infinite alternate;
-          animation: testimonial_animate 30s linear infinite alternate;
-}
-
 @media screen and (min-width: 360px) {
   .home__testimonycard {
-    min-width: 280px;
+    min-width: 300px;
   }
 }
 
@@ -1235,25 +1216,6 @@ img {
 
   .home__testimonycard {
     min-width: 350px;
-  }
-
-  .testimonial_animate {
-    -webkit-animation: testimonial_animate 45s linear infinite alternate;
-            animation: testimonial_animate 45s linear infinite alternate;
-  }
-}
-
-@-webkit-keyframes testimonial_animate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes testimonial_animate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
   }
 }
 
@@ -1469,12 +1431,12 @@ img {
   .md\:pt-\[210px\]{
     padding-top: 210px;
   }
-  .md\:text-\[clamp\(2\.5rem\2c 2\.5vw\2c 3\.31rem\)\]{
-    font-size: clamp(2.5rem,2.5vw,3.31rem);
-  }
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+  .md\:text-\[clamp\(2\.5rem\2c 2\.5vw\2c 3\.31rem\)\]{
+    font-size: clamp(2.5rem,2.5vw,3.31rem);
   }
 }
 @media (min-width: 1024px){

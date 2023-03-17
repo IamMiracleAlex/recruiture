@@ -62,26 +62,18 @@ const testimonials = [
 ];
 
 // html
-function htmlIndicatorBtn(active = false) {
+function htmlIndicatorBtn() {
   return `
       <span
-      data-id="${new Date().getTime() + Math.random()}"
- class="cursor-pointer block h-5 w-5 ${
-   active ? "bg-[var(--color-medium-green)]" : "bg-[var(--color-medium-blue)]"
- } rounded-full z-20"></span>
+ class="cursor-pointer block h-5 w-5 bg-[var(--color-medium-blue)] rounded-full z-20"></span>
     `;
 }
 
-function htmlTestimony(testimony, active = false) {
+function htmlTestimony(testimony) {
   const { name, imgUrl, profession, testimony: text } = testimony;
   return `
          <article
-         data-id="${new Date().getTime() + Math.random()}"
-                class="home__testimonycard ${
-                  active
-                    ? "home_testimonycard_active"
-                    : "home_testimonycard_inactive"
-                } rounded-xl p-5 h-max"
+                class="home__testimonycard home_testimonycard_inactive rounded-xl p-5 h-max"
               >
                 <q
                   class="line__clamp__4 text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
