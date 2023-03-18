@@ -912,6 +912,10 @@ img {
 .p-5{
   padding: 1.25rem;
 }
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -943,10 +947,6 @@ img {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 .pb-12{
   padding-bottom: 3rem;
