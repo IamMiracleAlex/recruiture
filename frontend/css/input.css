@@ -26,17 +26,6 @@ This declarations assumes that the generated css file lives in thesame directory
   font-style: normal;
 }
 
-/* currently unused font declaration and redundant fontfiles*/
-@font-face {
-  font-family: "Switzer-Bold";
-  src: url("../fonts/switzer/Switzer-Bold.woff2") format("woff2"),
-    url("../fonts/switzer/Switzer-Bold.woff") format("woff"),
-    url("../fonts/switzer/Switzer-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
 @font-face {
   font-family: "Satoshi-Bold";
   src: url("../fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
@@ -116,6 +105,13 @@ This declarations assumes that the generated css file lives in thesame directory
   -webkit-appearance: none;
   appearance: none;
   display: none;
+}
+
+.line__clamp__2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .line__clamp__4 {
@@ -261,4 +257,7 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 .green {
   outline: 2px solid green;
+}
+.text-primary {
+  color: #ff8a75;
 }
