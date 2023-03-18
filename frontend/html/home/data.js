@@ -4,7 +4,7 @@
 // data
 const testimonials = [
   {
-    name: "Mosimiloluwa Koye Ladele",
+    name: "Mosimiloluwa Koye ",
     imgUrl: "../../asssets/recruiture-logo-svg.svg",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     name: "Kolanle Ademoju",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "../../asssets/home/home-ourservices-image1.png",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Devops engineer",
@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: "Alex Chika",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "../../asssets/home/home-ourservices-image1.png",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Web developer",
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     name: "Ahmed Kabiru",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "../../asssets/home/home-ourservices-image1.png",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Systems Engineer",
@@ -81,7 +81,7 @@ function htmlTestimony(testimony) {
                   ${text}
                 </q>
 
-                <div class="flex items-center space-x-5 mt-5 pt-5 border-t">
+                <div class="flex justify-between items-center space-x-5 mt-5 pt-5 border-t">
                   <span class="h-16 w-16 rounded-full">
                     <img
                       class="rounded-full"
@@ -97,7 +97,7 @@ function htmlTestimony(testimony) {
                      ${name}
                     </cite>
                     <p
-                      class="font-extrabold text-[var(--color-medium-blue)] text-[clamp(0.8rem,1.3vw,1.15rem)]"
+                      class="font-bold text-[var(--color-medium-blue)] text-[clamp(0.75rem,1.25vw,1rem)]"
                     >
                       ${profession}
                     </p>

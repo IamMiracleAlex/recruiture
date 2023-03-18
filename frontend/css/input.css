@@ -95,6 +95,7 @@ This declarations assumes that the generated css file lives in thesame directory
   img {
     width: 100%;
     height: 100%;
+    border-radius: inherit;
   }
 }
 

@@ -61,7 +61,25 @@ function renderTesimonials(testimonials) {
     });
   });
 
-  setActiveTestimony(allTestimonies[1], allIndicatorBtn[1]);
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.65,
+  };
+
+  const observerHandler = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        let index = 0;
+        if (window.innerWidth >= 1152) index = 1;
+        setActiveTestimony(allTestimonies[index], allIndicatorBtn[index]);
+        observer.unobserve(testimonyWrapper);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerHandler, options);
+  observer.observe(testimonyWrapper);
 }
 
 function setActiveTestimony(testimony, btn) {
@@ -92,7 +110,7 @@ function setActiveTestimony(testimony, btn) {
 
   testimony.scrollIntoView({
     behavior: "smooth",
-    block: "start",
+    block: "nearest",
     inline: "center",
   });
 
@@ -102,7 +120,7 @@ function setActiveTestimony(testimony, btn) {
 function nextTestimony() {
   const allTestimonies = getAll("article", testimonyWrapper);
 
-  currentCard = currentCard || allTestimonies[1];
+  currentCard = currentCard || allTestimonies[0];
   let nextCard = currentCard.nextElementSibling || allTestimonies[0];
   let nextBtnIndex = allTestimonies.indexOf(nextCard);
   let nextBtn = getAll("span", indicatorWrapper)[nextBtnIndex];
@@ -113,7 +131,7 @@ function nextTestimony() {
 
 function prevTestimony() {
   const allTestimonies = getAll("article", testimonyWrapper);
-  currentCard = currentCard || allTestimonies[1];
+  currentCard = currentCard || allTestimonies[0];
   let prevCard =
     currentCard.previousElementSibling ||
     allTestimonies[allTestimonies.length - 1];
@@ -135,3 +153,25 @@ leftArrow.addEventListener("click", prevTestimony);
 document.addEventListener("DOMContentLoaded", () => {
   renderTesimonials(testimonials);
 });
+
+/**
+ *
+ *   let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  };
+
+  const observerHandler = (entries, observer) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+  setActiveTestimony(allTestimonies[2], allIndicatorBtn[2], "center");
+        observer.unobserve(testimonyWrapper);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerHandler, options);
+  observer.observe(testimonyWrapper);
+ */
