@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "postcss -o css/style.css css/input.css -w",
-    "build": "postcss -o css/style.css css/input.css -w"
+    "build": "postcss -o css/style.css css/input.css"
   },
   "keywords": [],
   "author": "",
