@@ -107,11 +107,11 @@ This declarations assumes that the generated css file lives in thesame directory
   display: none;
 }
 
-.line__clamp__2 {
+.line__clamp__3 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
 }
 
 .line__clamp__4 {
@@ -214,6 +214,15 @@ This declarations assumes that the generated css file lives in thesame directory
 
 .logos__animate {
   animation: logos__animate 36s linear infinite;
+}
+
+.home_getcertified_bg {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 24, 46, 0.85),
+      rgba(0, 24, 46, 0.85)
+    ),
+    url(../asssets/home/home-getcertified-image1.jpg);
 }
 
 @media screen and (min-width: 360px) {
