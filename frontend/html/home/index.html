@@ -108,6 +108,36 @@
     </nav>
 
     <!-- ------------- SideBar -------------- -->
+    <section
+      class="md:hidden w-full h-screen red z-50 fixed top-0 left-0 right-0 bottom-0 bg-white"
+    >
+      <!-- header -->
+      <div
+        class="flex w-full md:w-max xl:w-[33%] justify-between nav__shadow px-3 sm:px-5 py-2"
+      >
+        <!-- navbar logo mobile-screen -->
+        <a href="/" class="flex flex-col">
+          <p
+            class="relative text-2xl sm:text-3xl font-bold text-blue-800 w-max"
+          >
+            Re<span class="text-[var(--color-dark-green)]">cruit</span>ure
+          </p>
+
+          <small
+            class="text-[10px] sm:text-[11px] font-switzer-reg text-[var(--color-dark-blue)] -mt-[3px]"
+            >By Edubridge Academy</small
+          >
+        </a>
+
+        <!-- nav hamburger icon -->
+        <button class="font-extrabold">
+          <i class="bi bi-x-lg w-8 h-8"></i>
+        </button>
+      </div>
+
+      <!-- side bar body -->
+      <div class="px-3 sm:px-5 py-5 green"></div>
+    </section>
 
     <main>
       <!-- -------------- Banner -------------- -->
@@ -1186,11 +1216,11 @@
           >
             <!-- blog card -->
             <article
-              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)]"
+              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
               <!-- image and image overlay -->
               <div
-                class="relative group h-60 group transition-transform duration-200 ease-out rounded-2xl"
+                class="relative h-60 group transition-transform duration-200 ease-out rounded-3xl"
               >
                 <!-- image -->
                 <img
@@ -1200,7 +1230,7 @@
 
                 <!-- overlay -->
                 <div
-                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-2xl"
+                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-3xl"
                 >
                   <a
                     href="#"
@@ -1211,7 +1241,7 @@
               </div>
 
               <!-- post body (title, author, time) -->
-              <div class="px-5 py-3">
+              <div class="px-5 py-3 relative group-hover:flip_vertical">
                 <!-- title -->
                 <h3
                   class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
@@ -1232,15 +1262,31 @@
                     27th jan 2023
                   </p>
                 </div>
+
+                <!-- post body overlay (post desc) -->
+                <div
+                  class="absolute flip_vertical opacity-0 group-hover:opacity-100 top-0 rounded-3xl bottom-0 left-0 right-0 bg-white font-switzer-reg text-[rgb(11,28,44)] text-[clamp(1rem,1.2vw,1.2rem)] px-5 py-3 line__clamp__3"
+                >
+                  <p class="line__clamp__4">
+                    This quote by Winston Churchill really puts the life cycle
+                    of an entrepreneur in perspective. Failure won’t kill you,
+                    if you don’t let it. Experiencing this can give you more
+                    courage to try again. Even when you ‘make it’ and raise a
+                    lot of money or sell your company, life isn’t over. You
+                    might unfortunately, have a much clearer picture of the
+                    struggles, but then you get to start again with a new
+                    startup, or become an angel investor yourself.
+                  </p>
+                </div>
               </div>
             </article>
 
             <article
-              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)]"
+              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
               <!-- image and image overlay -->
               <div
-                class="relative group h-60 group transition-transform duration-200 ease-out rounded-2xl"
+                class="relative h-60 group transition-transform duration-200 ease-out rounded-3xl"
               >
                 <!-- image -->
                 <img
@@ -1250,7 +1296,7 @@
 
                 <!-- overlay -->
                 <div
-                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-2xl"
+                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-3xl"
                 >
                   <a
                     href="#"
@@ -1261,7 +1307,7 @@
               </div>
 
               <!-- post body (title, author, time) -->
-              <div class="px-5 py-3">
+              <div class="px-5 py-3 relative group-hover:flip_vertical">
                 <!-- title -->
                 <h3
                   class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
@@ -1272,7 +1318,7 @@
                 <!--author/date  -->
                 <div class="flex flex-wrap justify-between px-2 mt-3">
                   <p
-                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
                   >
                     Suberu Hamzat
                   </p>
@@ -1282,15 +1328,31 @@
                     27th jan 2023
                   </p>
                 </div>
+
+                <!-- post body overlay (post desc) -->
+                <div
+                  class="absolute flip_vertical opacity-0 group-hover:opacity-100 top-0 rounded-3xl bottom-0 left-0 right-0 bg-white font-switzer-reg text-[rgb(11,28,44)] text-[clamp(1rem,1.2vw,1.2rem)] px-5 py-3 line__clamp__3"
+                >
+                  <p class="line__clamp__4">
+                    This quote by Winston Churchill really puts the life cycle
+                    of an entrepreneur in perspective. Failure won’t kill you,
+                    if you don’t let it. Experiencing this can give you more
+                    courage to try again. Even when you ‘make it’ and raise a
+                    lot of money or sell your company, life isn’t over. You
+                    might unfortunately, have a much clearer picture of the
+                    struggles, but then you get to start again with a new
+                    startup, or become an angel investor yourself.
+                  </p>
+                </div>
               </div>
             </article>
 
             <article
-              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)]"
+              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
               <!-- image and image overlay -->
               <div
-                class="relative group h-60 group transition-transform duration-200 ease-out rounded-2xl"
+                class="relative h-60 group transition-transform duration-200 ease-out rounded-3xl"
               >
                 <!-- image -->
                 <img
@@ -1300,7 +1362,7 @@
 
                 <!-- overlay -->
                 <div
-                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-2xl"
+                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-3xl"
                 >
                   <a
                     href="#"
@@ -1311,7 +1373,7 @@
               </div>
 
               <!-- post body (title, author, time) -->
-              <div class="px-5 py-3">
+              <div class="px-5 py-3 relative group-hover:flip_vertical">
                 <!-- title -->
                 <h3
                   class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
@@ -1322,7 +1384,7 @@
                 <!--author/date  -->
                 <div class="flex flex-wrap justify-between px-2 mt-3">
                   <p
-                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
                   >
                     Suberu Hamzat
                   </p>
@@ -1330,6 +1392,22 @@
                     class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
                   >
                     27th jan 2023
+                  </p>
+                </div>
+
+                <!-- post body overlay (post desc) -->
+                <div
+                  class="absolute flip_vertical opacity-0 group-hover:opacity-100 top-0 rounded-3xl bottom-0 left-0 right-0 bg-white font-switzer-reg text-[rgb(11,28,44)] text-[clamp(1rem,1.2vw,1.2rem)] px-5 py-3 line__clamp__3"
+                >
+                  <p class="line__clamp__4">
+                    This quote by Winston Churchill really puts the life cycle
+                    of an entrepreneur in perspective. Failure won’t kill you,
+                    if you don’t let it. Experiencing this can give you more
+                    courage to try again. Even when you ‘make it’ and raise a
+                    lot of money or sell your company, life isn’t over. You
+                    might unfortunately, have a much clearer picture of the
+                    struggles, but then you get to start again with a new
+                    startup, or become an angel investor yourself.
                   </p>
                 </div>
               </div>
@@ -1368,7 +1446,7 @@
     </main>
 
     <footer
-      class="flex-col flex justify-center items-center py-10 w-full h-max px-5 mt-10"
+      class="flex-col flex justify-center items-center py-10 pb-5 w-full h-max px-5 mt-10"
     >
       <div
         class="max-w-6xl mx-auto gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
