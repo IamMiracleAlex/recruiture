@@ -225,6 +225,13 @@ This declarations assumes that the generated css file lives in thesame directory
   @apply transition-all duration-200 bg-white;
 }
 
+.home_testimony_indicator_active {
+  @apply bg-[var(--color-light-green)];
+}
+.home_testimony_indicator_inactive {
+  @apply bg-[var(--color-medium-blue)];
+}
+
 .logos__animate {
   animation: logos__animate 36s linear infinite;
 }

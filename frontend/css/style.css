@@ -1392,6 +1392,13 @@ img {
           transition-duration: 200ms;
 }
 
+.home_testimony_indicator_active{
+  background-color: var(--color-light-green);
+}
+.home_testimony_indicator_inactive{
+  background-color: var(--color-medium-blue);
+}
+
 .logos__animate {
   -webkit-animation: logos__animate 36s linear infinite;
           animation: logos__animate 36s linear infinite;

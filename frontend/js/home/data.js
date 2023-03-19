@@ -65,7 +65,7 @@ const testimonials = [
 function htmlIndicatorBtn() {
   return `
       <span
- class="cursor-pointer block h-4 w-4 bg-[var(--color-medium-blue)] rounded-full z-20"></span>
+ class="cursor-pointer block h-4 w-4 home_testimony_indicator_inactive rounded-full z-20"></span>
     `;
 }
 

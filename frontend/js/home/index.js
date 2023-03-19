@@ -73,8 +73,8 @@ function setActiveTestimony(testimony, btn) {
   let active_testimony = "home_testimonycard_active";
   let inactive_testimony = "home_testimonycard_inactive";
 
-  let active_btn = "bg-[var(--color-light-green)]";
-  let inactive_btn = "bg-[var(--color-medium-blue)]";
+  let active_btn = "home_testimony_indicator_active";
+  let inactive_btn = "home_testimony_indicator_inactive";
 
   const allTestimonies = getAll("article", testimonyWrapper); //testimony cards
   const allIndicatorBtn = getAll("span", indicatorWrapper); //circular btn
