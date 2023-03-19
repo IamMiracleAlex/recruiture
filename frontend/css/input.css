@@ -88,16 +88,6 @@ This declarations assumes that the generated css file lives in thesame directory
   }
 }
 
-.color {
-  color: #112f49;
-  color: #0b1c2c;
-  color: #10273a;
-  color: #5d646c;
-  background: #00182e;
-
-  color: rgba(11, 28, 44, 0.7);
-}
-
 /* --------------------------------------- */
 /*          custom utility classes         */
 /* --------------------------------------- */
@@ -167,6 +157,17 @@ This declarations assumes that the generated css file lives in thesame directory
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(15, 50, 59);
   }
+}
+
+/* --------------------------------------- */
+/*           Side Bar specific css         */
+/* --------------------------------------- */
+.sidebar__open {
+  @apply translate-x-0;
+}
+
+.sidebar__close {
+  @apply -translate-x-full;
 }
 
 /* --------------------------------------- */

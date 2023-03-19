@@ -2,21 +2,8 @@
 Note: This scripts is dedicated
 to the home page (html/home/index.html)
 */
-
+import { get, getAll } from "../utils.js";
 import { htmlIndicatorBtn, htmlTestimony, testimonials } from "./data.js";
-/* --------------------------------------- */
-/*                 Helpers                 */
-/* --------------------------------------- */
-function get(name, from = document) {
-  if (from.querySelector(name)) return from.querySelector(name);
-  throw new Error(`The specified element ${name} was not found`);
-}
-
-function getAll(name, from = document) {
-  if (from.querySelectorAll(name)) return [...from.querySelectorAll(name)];
-
-  return [];
-}
 
 /* --------------------------------------- */
 /*               Testimonials              */

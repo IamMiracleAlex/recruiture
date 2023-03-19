@@ -12,6 +12,7 @@
     />
     <title>Recruiture | Edubridge Academy</title>
     <script type="module" src="../../js/home/index.js" defer></script>
+    <script type="module" src="../../js/sidebar/sidebar.js"></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
         </a>
 
         <!-- nav hamburger icon. availaible on mobile only -->
-        <button class="md:hidden">
+        <button data-name="nav_button" class="md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -109,7 +110,9 @@
 
     <!-- ------------- SideBar -------------- -->
     <section
-      class="md:hidden w-full h-screen red z-50 fixed top-0 left-0 right-0 bottom-0 bg-white"
+      data-status="close"
+      data-name="side_bar"
+      class="sidebar__close transition-transform duration-200 ease-linear md:hidden w-full h-screen z-50 fixed top-0 left-0 bottom-0 bg-white max-w-md invisible"
     >
       <!-- header -->
       <div
@@ -130,13 +133,121 @@
         </a>
 
         <!-- nav hamburger icon -->
-        <button class="font-extrabold">
-          <i class="bi bi-x-lg w-8 h-8"></i>
+        <button
+          data-name="side_bar_button"
+          class="scale-150 text-3xl font-bold text-[var(--color-dark-blue)]"
+        >
+          <i class="bi bi-x"></i>
         </button>
       </div>
 
-      <!-- side bar body -->
-      <div class="px-3 sm:px-5 py-5 green"></div>
+      <!-- Nav links  -->
+      <ul class="flex flex-col gap-y-5 px-3 sm:px-5 py-5">
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="/"
+            ><i class="bi bi-house-fill"></i> &nbsp; Home</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="#"
+            ><i class="bi bi-envelope-paper"></i> &nbsp; Employer</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="#"
+            ><i class="bi bi-blockquote-left"></i> &nbsp; Blog</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="#"
+            ><i class="bi bi-journal-album"></i> &nbsp; About</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="flex justify-center items-center transition-colors duration-200 text-[clamp(16px,2vw,20px)] text-[var(--color-dark-blue)] hover:text-white hover:bg-[var(--color-medium-green)] tracking-wide py-2 px-3 rounded-md border-2 border-gray-500 hover:border-[var(--color-medium-green)]"
+            href="https://edubridgeacademy.com/"
+            class=""
+            >Get certified</a
+          >
+        </li>
+        <li>
+          <a
+            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
+            href="#"
+            >Hire a Talent</a
+          >
+        </li>
+      </ul>
+
+      <!-- nav footer -->
+      <div class="grid grid-cols-2 gap-x-1 px-3 sm:px-5 py-5">
+        <!-- Company Info -->
+        <div class="">
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-dark-green)]"
+          >
+            Company
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-3">
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="#"
+              >Our Services</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="#"
+              >Our value proposition</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="#"
+              >Get certified</a
+            >
+          </div>
+        </div>
+
+        <!-- Contact info -->
+        <div class="break-words">
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-dark-green)]"
+          >
+            Get in Touch
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-3">
+            <p
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+            >
+              18, Bakare Dawodu Street, Ifako Gbagada Lagos.
+            </p>
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="mailto:recruiture@edubridgeacademy.com"
+              >recruiture@edubridgeacademy.com</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="tel:+234 906 066 6278"
+              >+234 906 066 6278</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <main>
