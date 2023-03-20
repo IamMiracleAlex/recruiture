@@ -277,39 +277,48 @@ This declarations assumes that the generated css file lives in thesame directory
 /* --------------------------------------- */
 /*           Homescreen Animation          */
 /* --------------------------------------- */
-.home_header_animate {
+.home_blur_animate {
   filter: blur(12px);
   opacity: 0;
 }
-.home_header_animate.animate {
+.home_blur_animate.animate {
   filter: blur(0px);
   opacity: 1;
 }
 
-.home_counterbox_animate {
+.home_scaleout_animate {
   transform: scale(0);
   opacity: 1;
 }
-.home_counterbox_animate.animate {
+.home_scaleout_animate.animate {
   transform: scale(1);
   opacity: 1;
 }
 
-.home_ourservice_animate_left {
+.home_slide_left {
   transform: translateX(-150px);
   opacity: 0;
 }
-.home_ourservice_animate_left.animate {
+.home_slide_left.animate {
   transform: translateX(0);
   opacity: 1;
 }
 
-.home_ourservice_animate_right {
+.home_slide_right {
   transform: translateX(150px);
   opacity: 0;
 }
-.home_ourservice_animate_right.animate {
+.home_slide_right.animate {
   transform: translateX(0);
+  opacity: 1;
+}
+
+.home_slide_bottom {
+  transform: translateY(150px);
+  opacity: 0;
+}
+.home_slide_bottom.animate {
+  transform: translateY(0);
   opacity: 1;
 }
 
