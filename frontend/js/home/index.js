@@ -135,10 +135,39 @@ rightArrow.addEventListener("click", nextTestimony);
 leftArrow.addEventListener("click", prevTestimony);
 
 /* --------------------------------------- */
+/*                Animatiosn               */
+/* --------------------------------------- */
+// dom
+const animateElements = getAll(`[data-name="animate"]`);
+console.log(animateElements);
+
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.4,
+};
+
+const observerFunction = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    } else {
+      // entry.target.classList.remove("animate");
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerFunction, options);
+
+/* --------------------------------------- */
 /*                 Lifecyle                */
 /* --------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   renderTesimonials(testimonials);
+
+  animateElements.forEach((el) => {
+    observer.observe(el);
+  });
 });
 
 /**

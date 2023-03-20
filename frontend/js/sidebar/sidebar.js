@@ -31,5 +31,7 @@ sideBarButton.addEventListener("click", handleSideBar);
 navButton.addEventListener("click", handleSideBar);
 
 document.addEventListener("DOMContentLoaded", () => {
-  sideBar.classList.remove("invisible");
+  setTimeout(() => {
+    sideBar.classList.remove("invisible");
+  }, 200);
 });

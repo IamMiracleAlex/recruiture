@@ -93,6 +93,10 @@ This declarations assumes that the generated css file lives in thesame directory
 /* --------------------------------------- */
 
 @layer utilities {
+  .animation {
+    @apply transition-all ease-linear duration-700;
+  }
+
   .hide__scroll__bar::-webkit-scrollbar {
     -webkit-appearance: none;
     appearance: none;
@@ -268,6 +272,29 @@ This declarations assumes that the generated css file lives in thesame directory
   to {
     transform: translateX(0%);
   }
+}
+
+/* --------------------------------------- */
+/*           Homescreen Animation          */
+/* --------------------------------------- */
+.home_header_animate {
+  filter: blur(12px);
+  opacity: 0;
+}
+
+.home_header_animate.animate {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.home_counterbox_animate {
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+.home_counterbox_animate.animate {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* --------------------------------------- */
