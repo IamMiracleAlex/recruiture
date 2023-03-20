@@ -281,19 +281,35 @@ This declarations assumes that the generated css file lives in thesame directory
   filter: blur(12px);
   opacity: 0;
 }
-
 .home_header_animate.animate {
   filter: blur(0px);
   opacity: 1;
 }
 
 .home_counterbox_animate {
-  transform: translateY(150px);
-  opacity: 0;
+  transform: scale(0);
+  opacity: 1;
+}
+.home_counterbox_animate.animate {
+  transform: scale(1);
+  opacity: 1;
 }
 
-.home_counterbox_animate.animate {
-  transform: translateY(0);
+.home_ourservice_animate_left {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+.home_ourservice_animate_left.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.home_ourservice_animate_right {
+  transform: translateX(150px);
+  opacity: 0;
+}
+.home_ourservice_animate_right.animate {
+  transform: translateX(0);
   opacity: 1;
 }
 

@@ -1490,7 +1490,6 @@ img {
           filter: blur(12px);
   opacity: 0;
 }
-
 .home_header_animate.animate {
   -webkit-filter: blur(0px);
           filter: blur(0px);
@@ -1498,16 +1497,41 @@ img {
 }
 
 .home_counterbox_animate {
-  -webkit-transform: translateY(150px);
-      -ms-transform: translateY(150px);
-          transform: translateY(150px);
-  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 1;
+}
+.home_counterbox_animate.animate {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
-.home_counterbox_animate.animate {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+.home_ourservice_animate_left {
+  -webkit-transform: translateX(-150px);
+      -ms-transform: translateX(-150px);
+          transform: translateX(-150px);
+  opacity: 0;
+}
+.home_ourservice_animate_left.animate {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.home_ourservice_animate_right {
+  -webkit-transform: translateX(150px);
+      -ms-transform: translateX(150px);
+          transform: translateX(150px);
+  opacity: 0;
+}
+.home_ourservice_animate_right.animate {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   opacity: 1;
 }
 

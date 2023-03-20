@@ -144,7 +144,7 @@ console.log(animateElements);
 let options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.4,
+  threshold: 0.65,
 };
 
 const observerFunction = (entries, observer) => {
