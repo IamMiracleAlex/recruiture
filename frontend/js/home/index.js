@@ -4,6 +4,7 @@ to the home page (html/home/index.html)
 */
 import { get, getAll } from "../utils.js";
 import { htmlIndicatorBtn, htmlTestimony, testimonials } from "./data.js";
+
 /* --------------------------------------- */
 /*             Banner Counters             */
 /* --------------------------------------- */
@@ -33,7 +34,6 @@ counterObserver.observe(counterWrapper);
 function renderCount(counter, number) {
   if (!counter) return;
   const addition = number / 100;
-  console.log(addition);
   counter.textContent = 0;
 
   let init = 0;
@@ -47,7 +47,6 @@ function renderCount(counter, number) {
 function handleCounters() {
   counters.forEach((counter) => {
     const number = parseInt(counter.dataset.value) || 0;
-    console.log(number);
     renderCount(counter, number);
   });
 }
@@ -55,7 +54,6 @@ function handleCounters() {
 /* --------------------------------------- */
 /*               Testimonials              */
 /* --------------------------------------- */
-
 // Dom elements
 const testimonyWrapper = get(`[data-name="testimonyWrapper"]`); //testimonies parent wrapper
 const indicatorWrapper = get(`[data-name="indicatorWrapper"]`); //circular btn wrapper
