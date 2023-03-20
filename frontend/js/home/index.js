@@ -4,6 +4,53 @@ to the home page (html/home/index.html)
 */
 import { get, getAll } from "../utils.js";
 import { htmlIndicatorBtn, htmlTestimony, testimonials } from "./data.js";
+/* --------------------------------------- */
+/*             Banner Counters             */
+/* --------------------------------------- */
+// dom
+const counterWrapper = get("#counter");
+const counters = getAll(`[data-name="counter"]`);
+
+// functions
+const counterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        handleCounters();
+        observer.unobserve(counterWrapper);
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.65,
+  }
+);
+
+counterObserver.observe(counterWrapper);
+
+function renderCount(counter, number) {
+  if (!counter) return;
+  const addition = number / 100;
+  console.log(addition);
+  counter.textContent = 0;
+
+  let init = 0;
+  const interval = setInterval(() => {
+    init += addition;
+    if (init >= number) clearInterval(interval);
+    counter.textContent = Math.min(Math.ceil(init), number);
+  }, 50);
+}
+
+function handleCounters() {
+  counters.forEach((counter) => {
+    const number = parseInt(counter.dataset.value) || 0;
+    console.log(number);
+    renderCount(counter, number);
+  });
+}
 
 /* --------------------------------------- */
 /*               Testimonials              */
@@ -139,7 +186,6 @@ leftArrow.addEventListener("click", prevTestimony);
 /* --------------------------------------- */
 // dom
 const animateElements = getAll(`[data-name="animate"]`);
-console.log(animateElements);
 
 let options = {
   root: null,

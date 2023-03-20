@@ -295,6 +295,7 @@
 
           <!-- banner boxes/counters -->
           <div
+            id="counter"
             data-name="animate"
             class="home_scaleout_animate animation home__card__shadow min-h-[250px] md:w-[80%] max-w-[1024px] mx-auto bg-white h-max p-2"
           >
@@ -305,7 +306,7 @@
                 <h3
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
-                  10k+
+                  <span data-name="counter" data-value="10"> 10 </span>k+
                 </h3>
                 <p
                   class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
@@ -318,6 +319,8 @@
                 class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
               >
                 <h3
+                  data-name="counter"
+                  data-value="5000"
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
                   5,000
@@ -335,6 +338,8 @@
                 class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
               >
                 <h3
+                  data-name="counter"
+                  data-value="18"
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
                   18
@@ -352,7 +357,7 @@
                 <h3
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
-                  Top 10
+                  Top <span data-name="counter" data-value="10">10</span>
                 </h3>
                 <p
                   class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
