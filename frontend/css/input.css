@@ -88,37 +88,43 @@ This declarations assumes that the generated css file lives in thesame directory
   }
 }
 
-.color {
-  color: #112f49;
-  color: #0b1c2c;
-  color: #10273a;
-  color: #5d646c;
-  background: #00182e;
-
-  color: rgba(11, 28, 44, 0.7);
-}
-
 /* --------------------------------------- */
 /*          custom utility classes         */
 /* --------------------------------------- */
-.hide__scroll__bar::-webkit-scrollbar {
-  -webkit-appearance: none;
-  appearance: none;
-  display: none;
-}
 
-.line__clamp__2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
+@layer utilities {
+  .animation {
+    @apply transition-all ease-linear duration-700;
+  }
 
-.line__clamp__4 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  .hide__scroll__bar::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+  }
+
+  .line__clamp__3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .line__clamp__4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .red {
+    border: 2px solid red;
+  }
+
+  /* animation classes */
+  .flip_vertical {
+    animation: flip_vertical 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -155,6 +161,17 @@ This declarations assumes that the generated css file lives in thesame directory
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(15, 50, 59);
   }
+}
+
+/* --------------------------------------- */
+/*           Side Bar specific css         */
+/* --------------------------------------- */
+.sidebar__open {
+  @apply translate-x-0;
+}
+
+.sidebar__close {
+  @apply -translate-x-full;
 }
 
 /* --------------------------------------- */
@@ -212,8 +229,24 @@ This declarations assumes that the generated css file lives in thesame directory
   @apply transition-all duration-200 bg-white;
 }
 
+.home_testimony_indicator_active {
+  @apply bg-[var(--color-light-green)];
+}
+.home_testimony_indicator_inactive {
+  @apply bg-[var(--color-medium-blue)];
+}
+
 .logos__animate {
   animation: logos__animate 36s linear infinite;
+}
+
+.home_getcertified_bg {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 24, 46, 0.85),
+      rgba(0, 24, 46, 0.85)
+    ),
+    url(../asssets/home/home-getcertified-image1.jpg);
 }
 
 @media screen and (min-width: 360px) {
@@ -242,11 +275,56 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 /* --------------------------------------- */
+/*           Homescreen Animation          */
+/* --------------------------------------- */
+.home_blur_animate {
+  filter: blur(12px);
+  opacity: 0;
+}
+.home_blur_animate.animate {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.home_scaleout_animate {
+  transform: scale(0);
+  opacity: 1;
+}
+.home_scaleout_animate.animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.home_slide_left {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+.home_slide_left.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.home_slide_right {
+  transform: translateX(150px);
+  opacity: 0;
+}
+.home_slide_right.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.home_slide_bottom {
+  transform: translateY(150px);
+  opacity: 0;
+}
+.home_slide_bottom.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --------------------------------------- */
 /*           temporary debuggers           */
 /* --------------------------------------- */
-.red {
-  border: 2px solid red;
-}
 
 .yellow {
   outline: 4px solid yellow;
@@ -258,6 +336,18 @@ This declarations assumes that the generated css file lives in thesame directory
 .green {
   outline: 2px solid green;
 }
-.text-primary {
-  color: #ff8a75;
+
+/* --------------------------------------- */
+/*             Custom Keyframes            */
+/* --------------------------------------- */
+
+/* key frame classes are declared on the utilities layer */
+/* keyframes */
+@keyframes flip_vertical {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
 }

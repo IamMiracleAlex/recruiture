@@ -1,12 +1,403 @@
-<article class="max-w-[400px] mx-auto min-[576px]:max-w-[unset]">
-  <!-- blog image wrapper -->
-  <div>
-    <img src="" alt="" />
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="mt-5 px-5 py-10">
+      <div class="mx-auto max-w-6xl">
+        <!-- top bar (latest jobs / see all) -->
+        <div class="flex justify-between border rounded h-16 items-center px-5">
+          <p class="md:text-lg text-base text-[var(rgba(11,28,44,0.7))]">
+            Latest Jobs
+          </p>
+          <a
+            href="#"
+            class="md:text-lg text-base text-[var(--color-dark-green)]"
+            >See All</a
+          >
+        </div>
 
-  <!-- blog body (title and button) -->
-  <div>
-    <h3>Is Career Fulfilment a big deal</h3>
-    <a href="#">Read more</a>
-  </div>
-</article>
+        <!-- job card wrapper (a grid of 3 column) -->
+        <div
+          class="mt-10 grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5"
+        >
+          <!-- job card  -->
+          <article class="rounded-lg border p-5 cursor-pointer">
+            <!-- card header (logo, name,city) -->
+            <div class="flex space-x-5 items-center">
+              <span class="block rounded border p-2 h-20 w-20">
+                <img
+                  src="../../asssets/home/home-jobs-logo-stripe.png"
+                  alt="stripe company logo"
+                />
+              </span>
+
+              <div>
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
+                >
+                  Stripe
+                </h3>
+                <p
+                  class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                >
+                  Lagos
+                </p>
+              </div>
+            </div>
+
+            <!-- job type (contract, remote,onsite) -->
+            <div class="flex mt-5 space-x-2">
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Contract</span
+              >
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Remote</span
+              >
+            </div>
+
+            <!-- card body (job title, job dec) -->
+            <div class="mt-5">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                Product Designer
+              </h3>
+              <p
+                class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
+              >
+                We are looking for an experienced Product Designer with 3 years
+                of experience with tools like Figma, Sketch...
+              </p>
+            </div>
+
+            <!-- card footer (payrate,apply btn) -->
+            <div class="mt-2">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                $1300 <span class="opacity-60 font-switzer-reg">/month</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- job card  -->
+          <article class="rounded-lg border p-5 cursor-pointer">
+            <!-- card header (logo, name,city) -->
+            <div class="flex space-x-5 items-center">
+              <span class="block rounded border p-2 h-20 w-20">
+                <img
+                  src="../../asssets/home/home-jobs-logo-wechat.png"
+                  alt="stripe company logo"
+                />
+              </span>
+
+              <div>
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
+                >
+                  Stripe
+                </h3>
+                <p
+                  class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                >
+                  Lagos
+                </p>
+              </div>
+            </div>
+
+            <!-- job type (contract, remote,onsite) -->
+            <div class="flex mt-5 space-x-2">
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Contract</span
+              >
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Remote</span
+              >
+            </div>
+
+            <!-- card body (job title, job dec) -->
+            <div class="mt-5">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                Product Designer
+              </h3>
+              <p
+                class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
+              >
+                We are looking for an experienced Product Designer with 3 years
+                of experience with tools like Figma, Sketch...
+              </p>
+            </div>
+
+            <!-- card footer (payrate,apply btn) -->
+            <div class="mt-2">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                $1300 <span class="opacity-60 font-switzer-reg">/month</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- job card  -->
+          <article class="rounded-lg border p-5 cursor-pointer">
+            <!-- card header (logo, name,city) -->
+            <div class="flex space-x-5 items-center">
+              <span class="block rounded border p-2 h-20 w-20">
+                <img
+                  src="../../asssets/home/home-jobs-logo-asana.png"
+                  alt="stripe company logo"
+                />
+              </span>
+
+              <div>
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
+                >
+                  Stripe
+                </h3>
+                <p
+                  class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                >
+                  Lagos
+                </p>
+              </div>
+            </div>
+
+            <!-- job type (contract, remote,onsite) -->
+            <div class="flex mt-5 space-x-2">
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Contract</span
+              >
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Remote</span
+              >
+            </div>
+
+            <!-- card body (job title, job dec) -->
+            <div class="mt-5">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                Product Designer
+              </h3>
+              <p
+                class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
+              >
+                We are looking for an experienced Product Designer with 3 years
+                of experience with tools like Figma, Sketch...
+              </p>
+            </div>
+
+            <!-- card footer (payrate,apply btn) -->
+            <div class="mt-2">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                $1300 <span class="opacity-60 font-switzer-reg">/month</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- job card  -->
+          <article class="rounded-lg border p-5 cursor-pointer">
+            <!-- card header (logo, name,city) -->
+            <div class="flex space-x-5 items-center">
+              <span class="block rounded border p-2 h-20 w-20">
+                <img
+                  src="../../asssets/home/home-jobs-logo-stripe.png"
+                  alt="stripe company logo"
+                />
+              </span>
+
+              <div>
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
+                >
+                  Stripe
+                </h3>
+                <p
+                  class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                >
+                  Lagos
+                </p>
+              </div>
+            </div>
+
+            <!-- job type (contract, remote,onsite) -->
+            <div class="flex mt-5 space-x-2">
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Contract</span
+              >
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Remote</span
+              >
+            </div>
+
+            <!-- card body (job title, job dec) -->
+            <div class="mt-5">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                Product Designer
+              </h3>
+              <p
+                class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
+              >
+                We are looking for an experienced Product Designer with 3 years
+                of experience with tools like Figma, Sketch...
+              </p>
+            </div>
+
+            <!-- card footer (payrate,apply btn) -->
+            <div class="mt-2">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                $1300 <span class="opacity-60 font-switzer-reg">/month</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- job card  -->
+          <article class="rounded-lg border p-5 cursor-pointer">
+            <!-- card header (logo, name,city) -->
+            <div class="flex space-x-5 items-center">
+              <span class="block rounded border p-2 h-20 w-20">
+                <img
+                  src="../../asssets/home/home-jobs-logo-wechat.png"
+                  alt="stripe company logo"
+                />
+              </span>
+
+              <div>
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
+                >
+                  Stripe
+                </h3>
+                <p
+                  class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                >
+                  Lagos
+                </p>
+              </div>
+            </div>
+
+            <!-- job type (contract, remote,onsite) -->
+            <div class="flex mt-5 space-x-2">
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Contract</span
+              >
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Remote</span
+              >
+            </div>
+
+            <!-- card body (job title, job dec) -->
+            <div class="mt-5">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                Product Designer
+              </h3>
+              <p
+                class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
+              >
+                We are looking for an experienced Product Designer with 3 years
+                of experience with tools like Figma, Sketch...
+              </p>
+            </div>
+
+            <!-- card footer (payrate,apply btn) -->
+            <div class="mt-2">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                $1300 <span class="opacity-60 font-switzer-reg">/month</span>
+              </h3>
+            </div>
+          </article>
+
+          <!-- job card  -->
+          <article class="rounded-lg border p-5 cursor-pointer">
+            <!-- card header (logo, name,city) -->
+            <div class="flex space-x-5 items-center">
+              <span class="block rounded border p-2 h-20 w-20">
+                <img
+                  src="../../asssets/home/home-jobs-logo-asana.png"
+                  alt="stripe company logo"
+                />
+              </span>
+
+              <div>
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
+                >
+                  Stripe
+                </h3>
+                <p
+                  class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                >
+                  Lagos
+                </p>
+              </div>
+            </div>
+
+            <!-- job type (contract, remote,onsite) -->
+            <div class="flex mt-5 space-x-2">
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Contract</span
+              >
+              <span
+                class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
+                >Remote</span
+              >
+            </div>
+
+            <!-- card body (job title, job dec) -->
+            <div class="mt-5">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                Product Designer
+              </h3>
+              <p
+                class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
+              >
+                We are looking for an experienced Product Designer with 3 years
+                of experience with tools like Figma, Sketch...
+              </p>
+            </div>
+
+            <!-- card footer (payrate,apply btn) -->
+            <div class="mt-2">
+              <h3
+                class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
+              >
+                $1300 <span class="opacity-60 font-switzer-reg">/month</span>
+              </h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -11,7 +11,8 @@
       type="image/x-icon"
     />
     <title>Recruiture | Edubridge Academy</title>
-    <script type="module" src="./index.js" defer></script>
+    <script type="module" src="../../js/home/index.js" defer></script>
+    <script type="module" src="../../js/sidebar/sidebar.js"></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
         </a>
 
         <!-- nav hamburger icon. availaible on mobile only -->
-        <button class="md:hidden">
+        <button data-name="nav_button" class="md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -108,6 +109,146 @@
     </nav>
 
     <!-- ------------- SideBar -------------- -->
+    <section
+      data-status="close"
+      data-name="side_bar"
+      class="sidebar__close transition-transform duration-200 ease-linear md:hidden w-full h-screen z-50 fixed top-0 left-0 bottom-0 bg-white max-w-md invisible"
+    >
+      <!-- header -->
+      <div
+        class="flex w-full md:w-max xl:w-[33%] justify-between nav__shadow px-3 sm:px-5 py-2"
+      >
+        <!-- navbar logo mobile-screen -->
+        <a href="/" class="flex flex-col">
+          <p
+            class="relative text-2xl sm:text-3xl font-bold text-blue-800 w-max"
+          >
+            Re<span class="text-[var(--color-dark-green)]">cruit</span>ure
+          </p>
+
+          <small
+            class="text-[10px] sm:text-[11px] font-switzer-reg text-[var(--color-dark-blue)] -mt-[3px]"
+            >By Edubridge Academy</small
+          >
+        </a>
+
+        <!-- nav hamburger icon -->
+        <button
+          data-name="side_bar_button"
+          class="scale-150 text-3xl font-bold text-[var(--color-dark-blue)]"
+        >
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+
+      <!-- Nav links  -->
+      <ul class="flex flex-col gap-y-5 px-3 sm:px-5 py-5">
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="/"
+            ><i class="bi bi-house-fill"></i> &nbsp; Home</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="#"
+            ><i class="bi bi-envelope-paper"></i> &nbsp; Employer</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="#"
+            ><i class="bi bi-blockquote-left"></i> &nbsp; Blog</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
+            href="#"
+            ><i class="bi bi-journal-album"></i> &nbsp; About</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="flex justify-center items-center transition-colors duration-200 text-[clamp(16px,2vw,20px)] text-[var(--color-dark-blue)] hover:text-white hover:bg-[var(--color-medium-green)] tracking-wide py-2 px-3 rounded-md border-2 border-gray-500 hover:border-[var(--color-medium-green)]"
+            href="https://edubridgeacademy.com/"
+            class=""
+            >Get certified</a
+          >
+        </li>
+        <li>
+          <a
+            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
+            href="#"
+            >Hire a Talent</a
+          >
+        </li>
+      </ul>
+
+      <!-- nav footer -->
+      <div class="grid grid-cols-2 gap-x-1 px-3 sm:px-5 py-5">
+        <!-- Company Info -->
+        <div class="">
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-dark-green)]"
+          >
+            Company
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-3">
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="#"
+              >Our Services</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="#"
+              >Our value proposition</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="#"
+              >Get certified</a
+            >
+          </div>
+        </div>
+
+        <!-- Contact info -->
+        <div class="break-words">
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-dark-green)]"
+          >
+            Get in Touch
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-3">
+            <p
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+            >
+              18, Bakare Dawodu Street, Ifako Gbagada Lagos.
+            </p>
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="mailto:recruiture@edubridgeacademy.com"
+              >recruiture@edubridgeacademy.com</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md underline"
+              href="tel:+234 906 066 6278"
+              >+234 906 066 6278</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <main>
       <!-- -------------- Banner -------------- -->
@@ -130,20 +271,23 @@
             class="flex flex-col justify-center items-center w-full max-w-[1000px] mx-auto text-white text-center px-5 py-10 md:px-10 md:py-0 md:h-[calc(100vh-200px)] h-max"
           >
             <h1
-              class="text-[clamp(25px,3.5vw,64px)] leading-[clamp(2rem,4vw,64px)] font-satoshi-black"
+              data-name="animate"
+              class="home_blur_animate animation text-[clamp(25px,3.5vw,64px)] leading-[clamp(2rem,4vw,64px)] font-satoshi-black tracking-normal"
             >
               Your organization is one talent away from optimum
               <span class="text-[var(--color-light-green)]">performance</span>
             </h1>
             <p
-              class="text-[clamp(15px,1.5vw,20px)] text-[rgba(255,255,255,0.8)] mt-3 sm:mt-5 mx-auto"
+              data-name="animate"
+              class="home_blur_animate animation text-[clamp(15px,1.5vw,20px)] text-[rgba(255,255,255,0.8)] mt-3 sm:mt-5 mx-auto"
             >
               Recruiture will help you onboard the best trained talents in the
               shortest time possible.
             </p>
 
             <button
-              class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5"
+              data-name="animate"
+              class="home_blur_animate animation flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5"
             >
               Get started
             </button>
@@ -151,7 +295,9 @@
 
           <!-- banner boxes/counters -->
           <div
-            class="home__card__shadow min-h-[250px] md:w-[80%] max-w-[1024px] mx-auto bg-white h-max p-2"
+            id="counter"
+            data-name="animate"
+            class="home_scaleout_animate animation home__card__shadow min-h-[250px] md:w-[80%] max-w-[1024px] mx-auto bg-white h-max p-2"
           >
             <div class="flex">
               <article
@@ -160,7 +306,7 @@
                 <h3
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
-                  10k+
+                  <span data-name="counter" data-value="10"> 10 </span>k+
                 </h3>
                 <p
                   class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
@@ -173,6 +319,8 @@
                 class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
               >
                 <h3
+                  data-name="counter"
+                  data-value="5000"
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
                   5,000
@@ -190,6 +338,8 @@
                 class="flex flex-col justify-center w-[50%] py-10 px-3 sm:px-5 md:px-16"
               >
                 <h3
+                  data-name="counter"
+                  data-value="18"
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
                   18
@@ -207,7 +357,7 @@
                 <h3
                   class="text-[clamp(30px,3vw,56px)] leading-[clamp(2rem,4vw,64px)] text-[var(--color-light-blue)] font-satoshi-black"
                 >
-                  Top 10
+                  Top <span data-name="counter" data-value="10">10</span>
                 </h3>
                 <p
                   class="text-[clamp(15px,1.5vw,20px)] text-[var(--color-medium-blue)] leading-[clamp(20px,1.5vw,30px)] mt-3 sm:mt-5"
@@ -229,7 +379,8 @@
         <div class="mx-auto max-w-6xl">
           <!-- heading (Our services) -->
           <p
-            class="bg-[rgba(17,47,73,0.03)] py-2 px-9 mt-5 xl:mt-10 w-max rounded-[40px] font-satoshi-bold text-[clamp(1.25rem,2.7vw,2.5rem)] text-[var(--color-medium-blue)]"
+            data-name="animate"
+            class="home_slide_left animation bg-[rgba(17,47,73,0.03)] py-2 px-9 mt-5 xl:mt-10 w-max rounded-[40px] font-satoshi-bold text-[clamp(1.25rem,2.7vw,2.5rem)] text-[var(--color-medium-blue)]"
           >
             Our services
           </p>
@@ -240,7 +391,8 @@
           >
             <!-- text-wrapper -->
             <div
-              class="flex flex-col justify-center items-start order-1 sm:w-[50%]"
+              data-name="animate"
+              class="home_slide_left animation flex flex-col justify-center items-start order-1 sm:w-[50%]"
             >
               <h3
                 class="text-[var(--color-light-blue)] text-[clamp(1.56rem,6vw,3rem)] sm:text-[1.8rem] md:text-[clamp(2.5rem,2.5vw,3.31rem)] font-satoshi-bold"
@@ -250,7 +402,7 @@
               </h3>
 
               <p
-                class="w-[90%] text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
+                class="font-switzer-reg max-w-md text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
               >
                 Our candidate sourcing offering is designed specially for our
                 clients who would only like to source candidates from us. Our
@@ -260,7 +412,8 @@
             </div>
             <!-- image wrapper -->
             <div
-              class="order-2 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
+              data-name="animate"
+              class="home_slide_right animation order-2 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
             >
               <img
                 src="../../asssets/home/home-ourservices-image1.png"
@@ -275,7 +428,8 @@
           >
             <!-- text-wrapper -->
             <div
-              class="flex flex-col justify-center items-start order-1 sm:order-2 sm:w-[50%]"
+              data-name="animate"
+              class="home_slide_right animation flex flex-col justify-center items-start order-1 sm:order-2 sm:w-[50%]"
             >
               <h3
                 class="text-[var(--color-light-blue)] text-[clamp(1.56rem,6vw,3rem)] sm:text-[1.8rem] md:text-[clamp(2.5rem,2.5vw,3.31rem)] font-satoshi-bold"
@@ -285,7 +439,7 @@
               </h3>
 
               <p
-                class="w-[90%] text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
+                class="font-switzer-reg max-w-md text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
               >
                 Our Graduate Recruitment Service is specially designed to meet
                 the end-to-end needs of your business. <br />
@@ -296,7 +450,8 @@
             </div>
             <!-- image wrapper -->
             <div
-              class="order-2 sm:order-1 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
+              data-name="animate"
+              class="home_slide_left animation order-2 sm:order-1 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
             >
               <img
                 src="../../asssets/home/home-ourservices-image2.png"
@@ -311,7 +466,8 @@
           >
             <!-- text-wrapper -->
             <div
-              class="flex flex-col justify-center items-start order-1 sm:w-[50%]"
+              data-name="animate"
+              class="home_slide_left animation flex flex-col justify-center items-start order-1 sm:w-[50%]"
             >
               <h3
                 class="text-[var(--color-light-blue)] text-[clamp(1.56rem,6vw,3rem)] sm:text-[1.8rem] md:text-[clamp(2.5rem,2.5vw,3.31rem)] font-satoshi-bold"
@@ -321,7 +477,7 @@
               </h3>
 
               <p
-                class="w-[90%] text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
+                class="font-switzer-reg max-w-md text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
               >
                 We recruit professionals within the mid-level, senior, and
                 c-level cadres from our well-trained talent pool to ensure you
@@ -331,7 +487,8 @@
 
             <!-- image wrapper -->
             <div
-              class="order-2 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
+              data-name="animate"
+              class="home_slide_right animation order-2 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
             >
               <img
                 src="../../asssets/home/home-ourservices-image3.png"
@@ -347,7 +504,8 @@
         <div class="mx-auto max-w-6xl">
           <!-- heading (Our Value Proposition) -->
           <p
-            class="bg-[rgba(17,47,73,0.03)] py-2 px-9 w-max rounded-[40px] font-satoshi-bold text-[clamp(1.25rem,2.7vw,2.5rem)] text-[var(--color-medium-blue)]"
+            data-name="animate"
+            class="home_slide_left animation bg-[rgba(17,47,73,0.03)] py-2 px-9 w-max rounded-[40px] font-satoshi-bold text-[clamp(1.25rem,2.7vw,2.5rem)] text-[var(--color-medium-blue)]"
           >
             Our Value Proposition
           </p>
@@ -356,7 +514,8 @@
           <div class="flex flex-col sm:flex-row w-full sm:gap-6 lg:gap-14">
             <!-- our values card 1 -->
             <article
-              class="flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
+              data-name="animate"
+              class="home_slide_left animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
               <div
@@ -379,7 +538,7 @@
                 </h3>
 
                 <p
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
                 >
                   Our talents are market ready, as they have been trained and
                   adequately assessed by our team to ensure you get the perfect
@@ -390,7 +549,8 @@
 
             <!-- our values card 2 -->
             <article
-              class="flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
+              data-name="animate"
+              class="home_slide_right animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
               <div
@@ -413,7 +573,7 @@
                 </h3>
 
                 <p
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
                 >
                   We ensure you get the right talent from our trained pool of
                   talents within the shortest possible time to ensure the smooth
@@ -427,7 +587,8 @@
           <div class="flex flex-col sm:flex-row w-full sm:gap-6 lg:gap-14">
             <!-- our values card 3 -->
             <article
-              class="flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
+              data-name="animate"
+              class="home_slide_left animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
               <div
@@ -450,7 +611,7 @@
                 </h3>
 
                 <p
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
                 >
                   With our ready trained talents, you do not have to bear the
                   cost of training our talents as they are work ready to fit
@@ -461,7 +622,8 @@
 
             <!-- our values card 4 -->
             <article
-              class="flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
+              data-name="animate"
+              class="home_slide_right animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
               <div
@@ -484,7 +646,7 @@
                 </h3>
 
                 <p
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
                 >
                   Our business is al about staffing, this is why we maintain a
                   wide range of qualified staff with great skills giving us an
@@ -497,7 +659,10 @@
       </section>
 
       <!-- --------- Trusted partners --------- -->
-      <section class="bg-[#FDFDFD] py-10">
+      <section
+        data-name="animate"
+        class="home_slide_bottom animation bg-[#FDFDFD] py-10"
+      >
         <!-- trusted partners wrap -->
         <div class="bg-white home__card__shadow">
           <!-- heading () -->
@@ -665,14 +830,16 @@
         <div class="max-w-6xl mx-auto relative z-10">
           <!-- heading (our testimonials) -->
           <h3
-            class="font-satoshi-bold text-[var(--color-light-blue)] text-center text-[clamp(1.25rem,2.7vw,2.5rem)]"
+            data-name="animate"
+            class="home_blur_animate animation font-satoshi-bold text-[var(--color-light-blue)] text-center text-[clamp(1.25rem,2.7vw,2.5rem)]"
           >
             Our Testimonials
           </h3>
 
           <!-- sub heading (...) -->
           <p
-            class="text-center text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] mx-auto max-w-3xl mt-9"
+            data-name="animate"
+            class="home_blur_animate animation text-center text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] mx-auto max-w-3xl mt-9"
           >
             We have transformed the lives of several employers as well as job
             seekers. Here is what some of them have to say
@@ -680,7 +847,8 @@
 
           <!-- testimonials wrap -->
           <div
-            class="home__testimony mt-16 h-max relative flex justify-center items-center overflow-hidden bg-white border-x"
+            data-name="animate"
+            class="home_scaleout_animate animation home__testimony mt-16 h-max relative flex justify-center items-center overflow-hidden bg-white border-x"
           >
             <!-- buttons left arrow -->
             <button
@@ -705,7 +873,7 @@
             <!-- circular indicators -->
             <div
               data-name="indicatorWrapper"
-              class="absolute bottom-0 flex space-x-2"
+              class="absolute bottom-0 pt-10 flex space-x-2"
             >
               <!-- ------------------------------------ -->
               <!--       Javascript injects here        -->
@@ -765,410 +933,30 @@
       </section>
 
       <!-- ---------- Latetest Jobs ----------- -->
-      <section class="mt-5 px-5 py-10">
-        <div class="mx-auto max-w-6xl">
-          <!-- top bar (latest jobs / see all) -->
-          <div
-            class="flex justify-between border rounded h-16 items-center px-5"
-          >
-            <p class="md:text-lg text-base text-[var(rgba(11,28,44,0.7))]">
-              Latest Jobs
-            </p>
-            <a
-              href="#"
-              class="md:text-lg text-base text-[var(--color-dark-green)]"
-              >See All</a
-            >
-          </div>
-
-          <!-- job card wrapper (a grid of 3 column) -->
-          <div
-            class="mt-10 grid grid-cols-1 min-[500px]:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5"
-          >
-            <!-- job card  -->
-            <article class="rounded-lg border p-5 cursor-pointer">
-              <!-- card header (logo, name,city) -->
-              <div class="flex space-x-5 items-center">
-                <span class="block rounded border p-2 h-20 w-20">
-                  <img
-                    src="../../asssets/home/home-jobs-logo-stripe.png"
-                    alt="stripe company logo"
-                  />
-                </span>
-
-                <div>
-                  <h3
-                    class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
-                  >
-                    Stripe
-                  </h3>
-                  <p
-                    class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
-                  >
-                    Lagos
-                  </p>
-                </div>
-              </div>
-
-              <!-- job type (contract, remote,onsite) -->
-              <div class="flex mt-5 space-x-2">
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Contract</span
-                >
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Remote</span
-                >
-              </div>
-
-              <!-- card body (job title, job dec) -->
-              <div class="mt-5">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  Product Designer
-                </h3>
-                <p
-                  class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
-                >
-                  We are looking for an experienced Product Designer with 3
-                  years of experience with tools like Figma, Sketch...
-                </p>
-              </div>
-
-              <!-- card footer (payrate,apply btn) -->
-              <div class="mt-2">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  $1300 <span class="opacity-60 font-switzer-reg">/month</span>
-                </h3>
-              </div>
-            </article>
-
-            <!-- job card  -->
-            <article class="rounded-lg border p-5 cursor-pointer">
-              <!-- card header (logo, name,city) -->
-              <div class="flex space-x-5 items-center">
-                <span class="block rounded border p-2 h-20 w-20">
-                  <img
-                    src="../../asssets/home/home-jobs-logo-wechat.png"
-                    alt="stripe company logo"
-                  />
-                </span>
-
-                <div>
-                  <h3
-                    class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
-                  >
-                    Stripe
-                  </h3>
-                  <p
-                    class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
-                  >
-                    Lagos
-                  </p>
-                </div>
-              </div>
-
-              <!-- job type (contract, remote,onsite) -->
-              <div class="flex mt-5 space-x-2">
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Contract</span
-                >
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Remote</span
-                >
-              </div>
-
-              <!-- card body (job title, job dec) -->
-              <div class="mt-5">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  Product Designer
-                </h3>
-                <p
-                  class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
-                >
-                  We are looking for an experienced Product Designer with 3
-                  years of experience with tools like Figma, Sketch...
-                </p>
-              </div>
-
-              <!-- card footer (payrate,apply btn) -->
-              <div class="mt-2">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  $1300 <span class="opacity-60 font-switzer-reg">/month</span>
-                </h3>
-              </div>
-            </article>
-
-            <!-- job card  -->
-            <article class="rounded-lg border p-5 cursor-pointer">
-              <!-- card header (logo, name,city) -->
-              <div class="flex space-x-5 items-center">
-                <span class="block rounded border p-2 h-20 w-20">
-                  <img
-                    src="../../asssets/home/home-jobs-logo-asana.png"
-                    alt="stripe company logo"
-                  />
-                </span>
-
-                <div>
-                  <h3
-                    class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
-                  >
-                    Stripe
-                  </h3>
-                  <p
-                    class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
-                  >
-                    Lagos
-                  </p>
-                </div>
-              </div>
-
-              <!-- job type (contract, remote,onsite) -->
-              <div class="flex mt-5 space-x-2">
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Contract</span
-                >
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Remote</span
-                >
-              </div>
-
-              <!-- card body (job title, job dec) -->
-              <div class="mt-5">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  Product Designer
-                </h3>
-                <p
-                  class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
-                >
-                  We are looking for an experienced Product Designer with 3
-                  years of experience with tools like Figma, Sketch...
-                </p>
-              </div>
-
-              <!-- card footer (payrate,apply btn) -->
-              <div class="mt-2">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  $1300 <span class="opacity-60 font-switzer-reg">/month</span>
-                </h3>
-              </div>
-            </article>
-
-            <!-- job card  -->
-            <article class="rounded-lg border p-5 cursor-pointer">
-              <!-- card header (logo, name,city) -->
-              <div class="flex space-x-5 items-center">
-                <span class="block rounded border p-2 h-20 w-20">
-                  <img
-                    src="../../asssets/home/home-jobs-logo-stripe.png"
-                    alt="stripe company logo"
-                  />
-                </span>
-
-                <div>
-                  <h3
-                    class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
-                  >
-                    Stripe
-                  </h3>
-                  <p
-                    class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
-                  >
-                    Lagos
-                  </p>
-                </div>
-              </div>
-
-              <!-- job type (contract, remote,onsite) -->
-              <div class="flex mt-5 space-x-2">
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Contract</span
-                >
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Remote</span
-                >
-              </div>
-
-              <!-- card body (job title, job dec) -->
-              <div class="mt-5">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  Product Designer
-                </h3>
-                <p
-                  class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
-                >
-                  We are looking for an experienced Product Designer with 3
-                  years of experience with tools like Figma, Sketch...
-                </p>
-              </div>
-
-              <!-- card footer (payrate,apply btn) -->
-              <div class="mt-2">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  $1300 <span class="opacity-60 font-switzer-reg">/month</span>
-                </h3>
-              </div>
-            </article>
-
-            <!-- job card  -->
-            <article class="rounded-lg border p-5 cursor-pointer">
-              <!-- card header (logo, name,city) -->
-              <div class="flex space-x-5 items-center">
-                <span class="block rounded border p-2 h-20 w-20">
-                  <img
-                    src="../../asssets/home/home-jobs-logo-wechat.png"
-                    alt="stripe company logo"
-                  />
-                </span>
-
-                <div>
-                  <h3
-                    class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
-                  >
-                    Stripe
-                  </h3>
-                  <p
-                    class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
-                  >
-                    Lagos
-                  </p>
-                </div>
-              </div>
-
-              <!-- job type (contract, remote,onsite) -->
-              <div class="flex mt-5 space-x-2">
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Contract</span
-                >
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Remote</span
-                >
-              </div>
-
-              <!-- card body (job title, job dec) -->
-              <div class="mt-5">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  Product Designer
-                </h3>
-                <p
-                  class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
-                >
-                  We are looking for an experienced Product Designer with 3
-                  years of experience with tools like Figma, Sketch...
-                </p>
-              </div>
-
-              <!-- card footer (payrate,apply btn) -->
-              <div class="mt-2">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  $1300 <span class="opacity-60 font-switzer-reg">/month</span>
-                </h3>
-              </div>
-            </article>
-
-            <!-- job card  -->
-            <article class="rounded-lg border p-5 cursor-pointer">
-              <!-- card header (logo, name,city) -->
-              <div class="flex space-x-5 items-center">
-                <span class="block rounded border p-2 h-20 w-20">
-                  <img
-                    src="../../asssets/home/home-jobs-logo-asana.png"
-                    alt="stripe company logo"
-                  />
-                </span>
-
-                <div>
-                  <h3
-                    class="font-satoshi-bold text-[clamp(1.5rem,2vw,1.87rem)] text-[var(--color-light-blue)] text-center"
-                  >
-                    Stripe
-                  </h3>
-                  <p
-                    class="text-[rgba(11,28,44,0.7)] text-[clamp(0.75rem,1.25vw,1rem)]"
-                  >
-                    Lagos
-                  </p>
-                </div>
-              </div>
-
-              <!-- job type (contract, remote,onsite) -->
-              <div class="flex mt-5 space-x-2">
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Contract</span
-                >
-                <span
-                  class="font-switzer-reg text-[rgba(11,28,44,0.7)] opacity-95 text-[13px] rounded bg-[#FAFAFA] p-2 px-4"
-                  >Remote</span
-                >
-              </div>
-
-              <!-- card body (job title, job dec) -->
-              <div class="mt-5">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  Product Designer
-                </h3>
-                <p
-                  class="line__clamp__4 text-[13.5px] text-[rgba(11,28,44,0.7)] opacity-95 mt-2"
-                >
-                  We are looking for an experienced Product Designer with 3
-                  years of experience with tools like Figma, Sketch...
-                </p>
-              </div>
-
-              <!-- card footer (payrate,apply btn) -->
-              <div class="mt-2">
-                <h3
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)]"
-                >
-                  $1300 <span class="opacity-60 font-switzer-reg">/month</span>
-                </h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <!-- temporarily removed jobs sec -->
 
       <!-- -------- Learn More About Us -------- -->
-      <section class="bg-[#FEFEFE] py-10 px-2 sm:px-5">
+      <section class="bg-[#FDFDFD] py-10 px-2 sm:px-5">
         <div class="max-w-6xl mx-auto">
           <!-- heading (learn more about us) -->
-          <h3
-            class="font-satoshi-bold text-[var(--color-light-blue)] text-center text-[clamp(1.25rem,2.7vw,2.5rem)]"
+          <div
+            data-name="animate"
+            class="home_blur_animate animation max-w-[830px] mx-auto"
           >
-            Learn More About Us
-          </h3>
+            <h3
+              class="font-satoshi-bold text-[var(--color-light-blue)] text-center text-[clamp(1.25rem,2.7vw,2.5rem)] leading-tight"
+            >
+              Resources to learn more about how Recruiture works
+            </h3>
+
+            <!-- sub heading (...) -->
+            <p
+              class="text-center text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] mx-auto max-w-3xl mt-9"
+            >
+              Expertly curated articles to help you understand how our
+              recruitment processes work.
+            </p>
+          </div>
 
           <!-- blog cards wrapper (a flex of 3cols) -->
           <div
@@ -1176,213 +964,347 @@
           >
             <!-- blog card -->
             <article
-              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] group cursor-pointer flex flex-col bg-white home__card__shadow"
+              data-name="animate"
+              class="home_slide_bottom animation max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
+              <!-- image and image overlay -->
               <div
-                class="relative h-60 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out"
+                class="relative h-60 group transition-transform duration-200 ease-out rounded-3xl"
               >
+                <!-- image -->
                 <img
                   src="../../asssets/home/home-aboutus-image1.png"
                   alt="image description here"
                 />
 
-                <!-- overlay on photo -->
+                <!-- overlay -->
                 <div
-                  class="absolute bottom-0 w-full bg-opacity-40 bg-black drop-shadow-lg rounded text-white p-3 justify-between flex"
+                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-3xl"
                 >
-                  <!-- text - wrappers -->
-                  <div class="self-end">
-                    <p class="font-satoshi-black line__clamp__2 capitalize">
-                      Is career fulfilment a big deal?
-                    </p>
-
-                    <p class="font-switzer-reg opacity-95">18th March, 2023</p>
-                  </div>
-
-                  <!-- categoriess -->
-                  <div
-                    class="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center"
-                  >
-                    <p
-                      class="bg-white text-center text-[var(--color-dark-blue)] px-3 py-1 rounded-full text-sm"
-                    >
-                      Career
-                    </p>
-
-                    <p
-                      class="bg-white text-center text-[var(--color-dark-blue)] px-3 py-1 rounded-full text-sm"
-                    >
-                      Jobs
-                    </p>
-                  </div>
+                  <a
+                    href="#"
+                    class="text-white border-[var(--color-light-green)] border rounded-3xl p-2 px-10 scale-50 group-hover:scale-100 transition-transform duration-200 ease-out"
+                    >visit &nbsp; <i class="bi bi-link"></i>
+                  </a>
                 </div>
               </div>
 
-              <!-- post description -->
-              <div class="flex-1 p-3">
-                <p
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)] underline"
+              <!-- post body (title, author, time) -->
+              <div class="px-5 py-3 relative group-hover:flip_vertical">
+                <!-- title -->
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
                 >
-                  Is career fulfilment a big deal?
-                </p>
+                  How To Start Your First Hiring Process
+                </h3>
 
-                <p class="text-[] line__clamp__2 md:line__clamp__4 mt-1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tenetur quam laboriosam, quisquam fugit suscipit, sequi
-                  officia cumque reprehenderit aut ducimus voluptatum quos minus
-                  in perspiciatis numquam, corrupti laborum. Exercitationem,
-                  quidem.
-                </p>
-                <button
-                  class="bg-[var(--color-dark-green)] font-switzer-reg text-white w-max rounded-lg mt-5 py-1 px-3 flex items-center"
+                <!--author/date  -->
+                <div class="flex flex-wrap justify-between px-2 mt-3">
+                  <p
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+                  >
+                    Suberu Hamzat
+                  </p>
+                  <p
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  >
+                    27th jan 2023
+                  </p>
+                </div>
+
+                <!-- post body overlay (post desc) -->
+                <div
+                  class="absolute flip_vertical opacity-0 group-hover:opacity-100 top-0 rounded-3xl bottom-0 left-0 right-0 bg-white font-switzer-reg text-[rgb(11,28,44)] text-[clamp(1rem,1.2vw,1.2rem)] px-5 py-3 line__clamp__3"
                 >
-                  Read Post
-                </button>
+                  <p class="line__clamp__4">
+                    This quote by Winston Churchill really puts the life cycle
+                    of an entrepreneur in perspective. Failure won’t kill you,
+                    if you don’t let it. Experiencing this can give you more
+                    courage to try again. Even when you ‘make it’ and raise a
+                    lot of money or sell your company, life isn’t over. You
+                    might unfortunately, have a much clearer picture of the
+                    struggles, but then you get to start again with a new
+                    startup, or become an angel investor yourself.
+                  </p>
+                </div>
               </div>
             </article>
 
             <article
-              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] group cursor-pointer flex flex-col bg-white home__card__shadow"
+              data-name="animate"
+              class="home_slide_bottom animation max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
+              <!-- image and image overlay -->
               <div
-                class="relative h-60 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out"
+                class="relative h-60 group transition-transform duration-200 ease-out rounded-3xl"
               >
+                <!-- image -->
                 <img
-                  src="../../asssets/home/home-aboutus-image1.png"
+                  src="../../asssets/home/home-aboutus-image2.png"
                   alt="image description here"
                 />
 
-                <!-- overlay on photo -->
+                <!-- overlay -->
                 <div
-                  class="absolute bottom-0 w-full bg-opacity-40 bg-black drop-shadow-lg rounded text-white p-3 justify-between flex"
+                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-3xl"
                 >
-                  <!-- text - wrappers -->
-                  <div class="self-end">
-                    <p class="font-satoshi-black line__clamp__2 capitalize">
-                      Is career fulfilment a big deal?
-                    </p>
-
-                    <p class="font-switzer-reg opacity-95">18th March, 2023</p>
-                  </div>
-
-                  <!-- categoriess -->
-                  <div
-                    class="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center"
-                  >
-                    <p
-                      class="bg-white text-center text-[var(--color-dark-blue)] px-3 py-1 rounded-full text-sm"
-                    >
-                      Career
-                    </p>
-
-                    <p
-                      class="bg-white text-center text-[var(--color-dark-blue)] px-3 py-1 rounded-full text-sm"
-                    >
-                      Jobs
-                    </p>
-                  </div>
+                  <a
+                    href="#"
+                    class="text-white border-[var(--color-light-green)] border rounded-3xl p-2 px-10 scale-50 group-hover:scale-100 transition-transform duration-200 ease-out"
+                    >visit &nbsp; <i class="bi bi-link"></i>
+                  </a>
                 </div>
               </div>
 
-              <!-- post description -->
-              <div class="flex-1 p-3">
-                <p
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)] underline"
+              <!-- post body (title, author, time) -->
+              <div class="px-5 py-3 relative group-hover:flip_vertical">
+                <!-- title -->
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
                 >
-                  Is career fulfilment a big deal?
-                </p>
+                  Why We Help You Vet Talented Applicants
+                </h3>
 
-                <p class="text-[] line__clamp__2 md:line__clamp__4 mt-1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tenetur quam laboriosam, quisquam fugit suscipit, sequi
-                  officia cumque reprehenderit aut ducimus voluptatum quos minus
-                  in perspiciatis numquam, corrupti laborum. Exercitationem,
-                  quidem.
-                </p>
-                <button
-                  class="bg-[var(--color-dark-green)] font-switzer-reg text-white w-max rounded-lg mt-5 py-1 px-3 flex items-center"
+                <!--author/date  -->
+                <div class="flex flex-wrap justify-between px-2 mt-3">
+                  <p
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+                  >
+                    Suberu Hamzat
+                  </p>
+                  <p
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  >
+                    27th jan 2023
+                  </p>
+                </div>
+
+                <!-- post body overlay (post desc) -->
+                <div
+                  class="absolute flip_vertical opacity-0 group-hover:opacity-100 top-0 rounded-3xl bottom-0 left-0 right-0 bg-white font-switzer-reg text-[rgb(11,28,44)] text-[clamp(1rem,1.2vw,1.2rem)] px-5 py-3 line__clamp__3"
                 >
-                  Read Post
-                </button>
+                  <p class="line__clamp__4">
+                    This quote by Winston Churchill really puts the life cycle
+                    of an entrepreneur in perspective. Failure won’t kill you,
+                    if you don’t let it. Experiencing this can give you more
+                    courage to try again. Even when you ‘make it’ and raise a
+                    lot of money or sell your company, life isn’t over. You
+                    might unfortunately, have a much clearer picture of the
+                    struggles, but then you get to start again with a new
+                    startup, or become an angel investor yourself.
+                  </p>
+                </div>
               </div>
             </article>
 
             <article
-              class="max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] group cursor-pointer flex flex-col bg-white home__card__shadow"
+              data-name="animate"
+              class="home_slide_bottom animation max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
+              <!-- image and image overlay -->
               <div
-                class="relative h-60 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out"
+                class="relative h-60 group transition-transform duration-200 ease-out rounded-3xl"
               >
+                <!-- image -->
                 <img
-                  src="../../asssets/home/home-aboutus-image1.png"
+                  src="../../asssets/home/home-aboutus-image3.png"
                   alt="image description here"
                 />
 
-                <!-- overlay on photo -->
+                <!-- overlay -->
                 <div
-                  class="absolute bottom-0 w-full bg-opacity-40 bg-black drop-shadow-lg rounded text-white p-3 justify-between flex"
+                  class="absolute flex justify-center items-center bg-black bg-opacity-40 top-0 left-0 right-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out rounded-3xl"
                 >
-                  <!-- text - wrappers -->
-                  <div class="self-end">
-                    <p class="font-satoshi-black line__clamp__2 capitalize">
-                      Is career fulfilment a big deal?
-                    </p>
-
-                    <p class="font-switzer-reg opacity-95">18th March, 2023</p>
-                  </div>
-
-                  <!-- categoriess -->
-                  <div
-                    class="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center"
-                  >
-                    <p
-                      class="bg-white text-center text-[var(--color-dark-blue)] px-3 py-1 rounded-full text-sm"
-                    >
-                      Career
-                    </p>
-
-                    <p
-                      class="bg-white text-center text-[var(--color-dark-blue)] px-3 py-1 rounded-full text-sm"
-                    >
-                      Jobs
-                    </p>
-                  </div>
+                  <a
+                    href="#"
+                    class="text-white border-[var(--color-light-green)] border rounded-3xl p-2 px-10 scale-50 group-hover:scale-100 transition-transform duration-200 ease-out"
+                    >visit &nbsp; <i class="bi bi-link"></i>
+                  </a>
                 </div>
               </div>
 
-              <!-- post description -->
-              <div class="flex-1 p-3">
-                <p
-                  class="font-satoshi-bold text-[clamp(1rem,1.5vw,1.25rem)] text-[var(--color-light-blue)] underline"
+              <!-- post body (title, author, time) -->
+              <div class="px-5 py-3 relative group-hover:flip_vertical">
+                <!-- title -->
+                <h3
+                  class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
                 >
-                  Is career fulfilment a big deal?
-                </p>
+                  Putting Your Company In Our Hands Is Top-tier
+                </h3>
 
-                <p class="text-[] line__clamp__2 md:line__clamp__4 mt-1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tenetur quam laboriosam, quisquam fugit suscipit, sequi
-                  officia cumque reprehenderit aut ducimus voluptatum quos minus
-                  in perspiciatis numquam, corrupti laborum. Exercitationem,
-                  quidem.
-                </p>
-                <button
-                  class="bg-[var(--color-dark-green)] font-switzer-reg text-white w-max rounded-lg mt-5 py-1 px-3 flex items-center"
+                <!--author/date  -->
+                <div class="flex flex-wrap justify-between px-2 mt-3">
+                  <p
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+                  >
+                    Suberu Hamzat
+                  </p>
+                  <p
+                    class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] max-w-md"
+                  >
+                    27th jan 2023
+                  </p>
+                </div>
+
+                <!-- post body overlay (post desc) -->
+                <div
+                  class="absolute flip_vertical opacity-0 group-hover:opacity-100 top-0 rounded-3xl bottom-0 left-0 right-0 bg-white font-switzer-reg text-[rgb(11,28,44)] text-[clamp(1rem,1.2vw,1.2rem)] px-5 py-3 line__clamp__3"
                 >
-                  Read Post
-                </button>
+                  <p class="line__clamp__4">
+                    This quote by Winston Churchill really puts the life cycle
+                    of an entrepreneur in perspective. Failure won’t kill you,
+                    if you don’t let it. Experiencing this can give you more
+                    courage to try again. Even when you ‘make it’ and raise a
+                    lot of money or sell your company, life isn’t over. You
+                    might unfortunately, have a much clearer picture of the
+                    struggles, but then you get to start again with a new
+                    startup, or become an angel investor yourself.
+                  </p>
+                </div>
               </div>
             </article>
           </div>
+        </div>
+      </section>
 
-          <!-- Visit blog link -->
-          <a href="#">Visit Blog</a>
+      <!-- ---------- Get certified ----------- -->
+      <section
+        data-name="animate"
+        class="home_slide_bottom animation home_getcertified_bg flex-col flex justify-center items-center py-10 w-full aspect-video max-h-[30vh]"
+      >
+        <div class="max-w-[830px] mx-auto">
+          <h3
+            class="font-satoshi-black text-white text-center text-[clamp(1.25rem,2.7vw,2.5rem)] leading-tight sm:w-[80%] lg:w-auto mx-auto"
+          >
+            Are you an undergraduate, recent graduate or a working professional?
+          </h3>
+
+          <!-- sub heading (...) -->
+          <p
+            class="text-center text-[#949494] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] mx-auto max-w-3xl mt-5"
+          >
+            Take your career to the next level through EduBridge Academy
+            professional growth courses. They are proven to improve
+            employability and productivity.
+          </p>
+
+          <button
+            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5 mx-auto"
+          >
+            Get started
+          </button>
         </div>
       </section>
     </main>
 
-    <footer>
-      <!-- <h1 class="font-satoshi-black text-3xl">Hello here</h1> -->
-      <!-- text-[clamp(1.25rem,2.7vw,2.5rem)] -->
+    <footer
+      class="flex-col flex justify-center items-center py-10 pb-5 w-full h-max px-5 mt-10"
+    >
+      <div
+        class="max-w-6xl mx-auto gap-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+      >
+        <!-- navbar logo -->
+        <div>
+          <a href="/" class="h-[65px] lg:h-[85px] block">
+            <img
+              class="w-auto"
+              src="../../asssets/recruiture-logo-svg.svg"
+              alt="recruiture's logo icon"
+            />
+          </a>
+        </div>
+
+        <div>
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
+          >
+            Quick Links
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-5">
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >About us</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >Blog</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >Employer</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >Testimonials</a
+            >
+          </div>
+        </div>
+
+        <div>
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
+          >
+            Company
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-5">
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >Our Services</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >Our value proposition</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="#"
+              >Get certified</a
+            >
+          </div>
+        </div>
+
+        <div class="break-words">
+          <h3
+            class="font-satoshi-bold text-[clamp(1.1rem,1.4vw,1.4rem)] text-[var(--color-light-blue)]"
+          >
+            Get in Touch
+          </h3>
+
+          <div class="flex flex-col space-y-3 mt-5">
+            <p
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+            >
+              18, Bakare Dawodu Street, Ifako Gbagada Lagos.
+            </p>
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="mailto:recruiture@edubridgeacademy.com"
+              >recruiture@edubridgeacademy.com</a
+            >
+            <a
+              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
+              href="tel:+234 906 066 6278"
+              >+234 906 066 6278</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto border-t mt-10 w-full">
+        <p
+          class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] py-5"
+        >
+          Copyright: Recruiture 2022. All rights reserved. Privacy & Terms
+        </p>
+      </div>
     </footer>
   </body>
 </html>

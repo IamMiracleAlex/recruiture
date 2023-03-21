@@ -2,26 +2,58 @@
 Note: This scripts is dedicated
 to the home page (html/home/index.html)
 */
-
+import { get, getAll } from "../utils.js";
 import { htmlIndicatorBtn, htmlTestimony, testimonials } from "./data.js";
+
 /* --------------------------------------- */
-/*                 Helpers                 */
+/*             Banner Counters             */
 /* --------------------------------------- */
-function get(name, from = document) {
-  if (from.querySelector(name)) return from.querySelector(name);
-  throw new Error(`The specified element ${name} was not found`);
+// dom
+const counterWrapper = get("#counter");
+const counters = getAll(`[data-name="counter"]`);
+
+// functions
+const counterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        handleCounters();
+        observer.unobserve(counterWrapper);
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.65,
+  }
+);
+
+counterObserver.observe(counterWrapper);
+
+function renderCount(counter, number) {
+  if (!counter) return;
+  const addition = number / 100;
+  counter.textContent = 0;
+
+  let init = 0;
+  const interval = setInterval(() => {
+    init += addition;
+    if (init >= number) clearInterval(interval);
+    counter.textContent = Math.min(Math.ceil(init), number);
+  }, 50);
 }
 
-function getAll(name, from = document) {
-  if (from.querySelectorAll(name)) return [...from.querySelectorAll(name)];
-
-  return [];
+function handleCounters() {
+  counters.forEach((counter) => {
+    const number = parseInt(counter.dataset.value) || 0;
+    renderCount(counter, number);
+  });
 }
 
 /* --------------------------------------- */
 /*               Testimonials              */
 /* --------------------------------------- */
-
 // Dom elements
 const testimonyWrapper = get(`[data-name="testimonyWrapper"]`); //testimonies parent wrapper
 const indicatorWrapper = get(`[data-name="indicatorWrapper"]`); //circular btn wrapper
@@ -86,8 +118,8 @@ function setActiveTestimony(testimony, btn) {
   let active_testimony = "home_testimonycard_active";
   let inactive_testimony = "home_testimonycard_inactive";
 
-  let active_btn = "bg-[var(--color-light-green)]";
-  let inactive_btn = "bg-[var(--color-medium-blue)]";
+  let active_btn = "home_testimony_indicator_active";
+  let inactive_btn = "home_testimony_indicator_inactive";
 
   const allTestimonies = getAll("article", testimonyWrapper); //testimony cards
   const allIndicatorBtn = getAll("span", indicatorWrapper); //circular btn
@@ -148,10 +180,38 @@ rightArrow.addEventListener("click", nextTestimony);
 leftArrow.addEventListener("click", prevTestimony);
 
 /* --------------------------------------- */
+/*                Animatiosn               */
+/* --------------------------------------- */
+// dom
+const animateElements = getAll(`[data-name="animate"]`);
+
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.75,
+};
+
+const observerFunction = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    } else {
+      // entry.target.classList.remove("animate");
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerFunction, options);
+
+/* --------------------------------------- */
 /*                 Lifecyle                */
 /* --------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   renderTesimonials(testimonials);
+
+  animateElements.forEach((el) => {
+    observer.observe(el);
+  });
 });
 
 /**
