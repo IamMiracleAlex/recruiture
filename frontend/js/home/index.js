@@ -188,7 +188,7 @@ const animateElements = getAll(`[data-name="animate"]`);
 let options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.75,
+  threshold: 0.45,
 };
 
 const observerFunction = (entries, observer) => {
