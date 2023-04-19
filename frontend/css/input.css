@@ -296,7 +296,7 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 .home_slide_left {
-  transform: translateX(-150px);
+  transform: translateX(-100px);
   opacity: 0;
   overflow: hidden;
 }
@@ -306,7 +306,7 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 .home_slide_right {
-  transform: translateX(150px);
+  transform: translateX(100px);
   opacity: 0;
   overflow: hidden;
 }
@@ -316,7 +316,7 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 .home_slide_bottom {
-  transform: translateY(150px);
+  transform: translateY(100px);
   opacity: 0;
 }
 .home_slide_bottom.animate {
