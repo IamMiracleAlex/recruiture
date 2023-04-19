@@ -76,7 +76,7 @@ function htmlTestimony(testimony) {
                 class="home__testimonycard home_testimonycard_inactive rounded-xl p-5 h-max"
               >
                 <q
-                  class="line__clamp__4 text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)]"
+                  class="line__clamp__4 text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)]" text-center leading-[clamp(1.5rem,2vw,3rem)]"
                 >
                   ${text}
                 </q>
