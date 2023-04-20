@@ -1138,6 +1138,9 @@ img {
 .list-outside{
   list-style-position: outside;
 }
+.list-disc{
+  list-style-type: disc;
+}
 .appearance-none{
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1952,6 +1955,10 @@ img {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 .pb-12{
   padding-bottom: 3rem;
