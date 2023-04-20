@@ -720,6 +720,9 @@ img {
 .mt-3{
   margin-top: 0.75rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -1752,6 +1755,9 @@ img {
 }
 .border-t{
   border-top-width: 1px;
+}
+.border-t-4{
+  border-top-width: 4px;
 }
 .border-solid{
   border-style: solid;
