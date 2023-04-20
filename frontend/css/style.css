@@ -831,6 +831,9 @@ img {
 .h-auto{
   height: auto;
 }
+.h-full{
+  height: 100%;
+}
 .h-max{
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -839,23 +842,14 @@ img {
 .h-screen{
   height: 100vh;
 }
-.h-full{
-  height: 100%;
-}
 .max-h-\[30vh\]{
   max-height: 30vh;
-}
-.max-h-\[375px\]{
-  max-height: 375px;
 }
 .max-h-\[400px\]{
   max-height: 400px;
 }
 .max-h-\[500px\]{
   max-height: 500px;
-}
-.max-h-\[300px\]{
-  max-height: 300px;
 }
 .min-h-\[250px\]{
   min-height: 250px;

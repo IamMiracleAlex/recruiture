@@ -5,56 +5,56 @@
 const testimonials = [
   {
     name: "Mosimiloluwa Koye ",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "./asssets/recruiture-logo-svg.svg",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Senior analyst",
   },
   {
     name: "Kolanle Ademoju",
-    imgUrl: "../../asssets/home/home-ourservices-image1.png",
+    imgUrl: "./asssets/home/home-ourservices-image1.png",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Devops engineer",
   },
   {
     name: "Ahmed Kabiru",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "./asssets/recruiture-logo-svg.svg",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Systems Engineer",
   },
   {
     name: "Alex Chika",
-    imgUrl: "../../asssets/home/home-ourservices-image1.png",
+    imgUrl: "./asssets/home/home-ourservices-image1.png",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Web developer",
   },
   {
     name: "Mosimiloluwa Koye Ladele",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "./asssets/recruiture-logo-svg.svg",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Senior analyst",
   },
   {
     name: "Kolanle Ademoju",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "./asssets/recruiture-logo-svg.svg",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Devops engineer",
   },
   {
     name: "Ahmed Kabiru",
-    imgUrl: "../../asssets/home/home-ourservices-image1.png",
+    imgUrl: "./asssets/home/home-ourservices-image1.png",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Systems Engineer",
   },
   {
     name: "Alex Chika",
-    imgUrl: "../../asssets/recruiture-logo-svg.svg",
+    imgUrl: "./asssets/recruiture-logo-svg.svg",
     testimony:
       " Despite graduating with a first class, I struggled to get a job. EduBridge changed my story. ",
     profession: "Web developer",
