@@ -91,16 +91,16 @@ function htmlTestimony(testimony) {
                   </span>
 
                   <div>
-                    <cite
-                      class="text-[#5D646C] text-[clamp(0.9rem,1.4vw,1.18rem)]"
+                    <p
+                      class="font-semibold text-[var(--color-medium-blue)] text-[clamp(0.75rem,1.25vw,1rem)]"
                     >
                      ${name}
-                    </cite>
-                    <p
-                      class="font-bold text-[var(--color-medium-blue)] text-[clamp(0.75rem,1.25vw,1rem)]"
+                    </p>
+                    <small
+                      class="text-[#5D646C] font-medium italic text-[var(--color-medium-blue)]"
                     >
                       ${profession}
-                    </p>
+                    </small>
                   </div>
                 </div>
               </article>
