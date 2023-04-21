@@ -249,11 +249,95 @@
       </div>
     </section>
 
-    <main class="blue">
-      <!-- ---------- employer form ----------- -->
-      <section class="bg-[#F3F3F3] max-w-6xl mx-auto flex h-64 mt-16">
-        <div class="blue"></div>
-        <div class="red"></div>
+    <main>
+      <!-- ---------- employer form wrapper----------- -->
+      <section
+        class="bg-[#F3F3F3] max-w-[1000px] mx-auto flex my-16 relative justify-center items-center"
+      >
+        <!-- ----------right immage wrapper ---------- -->
+        <div class="w-full max-h-[600px]">
+          <img
+            class="object-cover"
+            src="../asssets/employer/employer-form-image-one.png"
+            alt=""
+          />
+        </div>
+
+        <!-- -----------left bg wrapper ----------- -->
+        <div class="w-full relative flex items-center justify-center"></div>
+
+        <!-- form wrapper -->
+        <div
+          class="bg-[#FBFBFB] rounded-3xl absolute w-full max-w-[525px] right-[-100px] px-5 py-7 sm:px-10"
+        >
+          <!-- form header  -->
+          <div>
+            <h3
+              class="font-satoshi-bold text-[clamp(1.125rem,2.1vw,2rem)] text-[var(--color-medium-blue)] leading-6"
+            >
+              Employer Form
+            </h3>
+            <small class="text-[var(--color-medium-blue)]">
+              Fill out these details to get started
+            </small>
+          </div>
+
+          <!-- form fields -->
+          <form>
+            <!-- first name -->
+            <article class="mt-7">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="First name"
+                name="firstName"
+                type="text"
+              />
+            </article>
+
+            <!-- second name -->
+            <article class="mt-4">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="Surname"
+                name="surname"
+                type="text"
+              />
+            </article>
+
+            <!-- company name -->
+            <article class="mt-4">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="Company"
+                name="company"
+                type="text"
+              />
+            </article>
+
+            <!-- company name -->
+            <article class="mt-4">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="Email"
+                name="email"
+                type="email"
+              />
+            </article>
+
+            <!-- company name -->
+            <article class="mt-4">
+              <select class="w-full rounded-lg p-3" name="role">
+                <option value="">Role you are recruiting for</option>
+              </select>
+            </article>
+
+            <button
+              class="w-full text-center bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] p-3 mt-7 rounded-lg"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </section>
     </main>
   </body>
