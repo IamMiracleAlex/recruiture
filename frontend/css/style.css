@@ -639,17 +639,17 @@ img {
 .right-0{
   right: 0px;
 }
+.right-\[-100px\]{
+  right: -100px;
+}
 .right-\[20px\]{
   right: 20px;
 }
 .top-0{
   top: 0px;
 }
-.left-\[100px\]{
-  left: 100px;
-}
-.left-\[-100px\]{
-  left: -100px;
+.right-\[100px\]{
+  right: 100px;
 }
 .isolate{
   isolation: isolate;
@@ -704,13 +704,13 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.my-5{
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
 .my-16{
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .-mt-\[3px\]{
   margin-top: -3px;
@@ -736,14 +736,11 @@ img {
 .mt-5{
   margin-top: 1.25rem;
 }
-.mt-9{
-  margin-top: 2.25rem;
-}
-.mt-6{
-  margin-top: 1.5rem;
-}
 .mt-7{
   margin-top: 1.75rem;
+}
+.mt-9{
+  margin-top: 2.25rem;
 }
 .box-border{
   -webkit-box-sizing: border-box;
@@ -838,9 +835,6 @@ img {
 .h-60{
   height: 15rem;
 }
-.h-64{
-  height: 16rem;
-}
 .h-8{
   height: 2rem;
 }
@@ -872,9 +866,6 @@ img {
 }
 .max-h-\[500px\]{
   max-height: 500px;
-}
-.max-h-\[700px\]{
-  max-height: 700px;
 }
 .max-h-\[600px\]{
   max-height: 600px;
@@ -911,8 +902,8 @@ img {
   width: -moz-max-content;
   width: max-content;
 }
-.min-w-full{
-  min-width: 100%;
+.w-\[95\%\]{
+  width: 95%;
 }
 .max-w-3xl{
   max-width: 48rem;
@@ -929,20 +920,14 @@ img {
 .max-w-\[400px\]{
   max-width: 400px;
 }
+.max-w-\[525px\]{
+  max-width: 525px;
+}
 .max-w-\[830px\]{
   max-width: 830px;
 }
 .max-w-md{
   max-width: 28rem;
-}
-.max-w-\[525px\]{
-  max-width: 525px;
-}
-.max-w-\[580px\]{
-  max-width: 580px;
-}
-.max-w-\[520px\]{
-  max-width: 520px;
 }
 .flex-shrink{
   -ms-flex-negative: 1;
@@ -1733,14 +1718,14 @@ img {
 .rounded-full{
   border-radius: 9999px;
 }
+.rounded-lg{
+  border-radius: 0.5rem;
+}
 .rounded-md{
   border-radius: 0.375rem;
 }
 .rounded-xl{
   border-radius: 0.75rem;
-}
-.rounded-lg{
-  border-radius: 0.5rem;
 }
 .rounded-b{
   border-bottom-right-radius: 0.25rem;
@@ -1866,9 +1851,6 @@ img {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[--color-dark-green\]{
-  background-color: --color-dark-green;
-}
 .bg-opacity-40{
   --tw-bg-opacity: 0.4;
 }
@@ -1960,11 +1942,11 @@ img {
 .p-2{
   padding: 0.5rem;
 }
-.p-5{
-  padding: 1.25rem;
-}
 .p-3{
   padding: 0.75rem;
+}
+.p-5{
+  padding: 1.25rem;
 }
 .px-10{
   padding-left: 2.5rem;
@@ -2201,6 +2183,9 @@ img {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
+.leading-6{
+  line-height: 1.5rem;
+}
 .leading-\[clamp\(1\.5rem\2c 2vw\2c 3rem\)\]{
   line-height: clamp(1.5rem,2vw,3rem);
 }
@@ -2212,15 +2197,6 @@ img {
 }
 .leading-tight{
   line-height: 1.25;
-}
-.leading-3{
-  line-height: .75rem;
-}
-.leading-5{
-  line-height: 1.25rem;
-}
-.leading-6{
-  line-height: 1.5rem;
 }
 .tracking-normal{
   letter-spacing: 0em;
@@ -3114,6 +3090,10 @@ img {
     margin-right: calc(1.25rem * var(--tw-space-x-reverse));
     margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
+  .sm\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
   .sm\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
@@ -3129,10 +3109,6 @@ img {
   .sm\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-  .sm\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
   .sm\:text-3xl{
     font-size: 1.875rem;
@@ -3151,6 +3127,13 @@ img {
 @media (min-width: 768px){
   .md\:bottom-0{
     bottom: 0px;
+  }
+  .md\:right-\[100px\]{
+    right: 100px;
+  }
+  .md\:my-16{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
   .md\:block{
     display: block;
@@ -3178,6 +3161,9 @@ img {
   .md\:h-screen{
     height: 100vh;
   }
+  .md\:max-h-\[600px\]{
+    max-height: 600px;
+  }
   .md\:min-h-\[80px\]{
     min-height: 80px;
   }
@@ -3197,6 +3183,9 @@ img {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+  .md\:w-full{
+    width: 100%;
   }
   .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -3252,9 +3241,6 @@ img {
   }
   .lg\:h-\[85px\]{
     height: 85px;
-  }
-  .lg\:max-h-\[600px\]{
-    max-height: 600px;
   }
   .lg\:w-auto{
     width: auto;
