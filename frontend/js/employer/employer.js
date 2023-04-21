@@ -4,12 +4,12 @@ import { get, getAll } from "../utils.js";
 // dom
 const employerModal = get("#employer-modal");
 const employerForm = get("#employer-form");
-const employerFormBtn = get("button", employerForm);
 const allEmployerNavLink = getAll(`[data-name="employer-btn"]`);
 const allEmployerSidebarLink = getAll(`[data-name="sidebar-employer-btn"]`);
 
 const SuccessModalWrapper = get("#success-modal-wrapper");
 const SuccessModal = get("#success-modal");
+const SuccessModalBtn = get("button", SuccessModal);
 
 // variables
 const showModal = "employer_modal_open";
@@ -34,6 +34,18 @@ function handleModalFromSidebar() {
   handleModal(employerModal);
 }
 
+function handleShowSuccessModal() {
+  handleModal(SuccessModalWrapper);
+  SuccessModal.style.transform = "translateY(0px)";
+}
+
+function handleCloseSuccessModal() {
+  SuccessModal.style.transform = "translateY(200%)";
+  setTimeout(() => {
+    handleModal(SuccessModalWrapper);
+  }, 500);
+}
+
 // events
 allEmployerNavLink.forEach((link) => {
   link.addEventListener("click", () => handleModal(employerModal));
@@ -49,14 +61,16 @@ employerModal.addEventListener("click", (e) => {
 
 employerForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  handleModal(SuccessModalWrapper);
-  console.log("I was submitted");
+  handleShowSuccessModal();
 });
 
 SuccessModalWrapper.addEventListener("click", (e) => {
   if (e.target === SuccessModalWrapper) {
-    handleModal(SuccessModalWrapper);
-    console.log("Iw");
+    handleCloseSuccessModal();
   }
+});
+
+SuccessModalBtn.addEventListener("click", () => {
+  location.assign("/");
+  console.log("i was clickes at success btn");
 });
