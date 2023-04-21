@@ -720,6 +720,9 @@ img {
 .mt-3{
   margin-top: 0.75rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -819,6 +822,9 @@ img {
 .h-60{
   height: 15rem;
 }
+.h-64{
+  height: 16rem;
+}
 .h-8{
   height: 2rem;
 }
@@ -831,6 +837,9 @@ img {
 .h-auto{
   height: auto;
 }
+.h-full{
+  height: 100%;
+}
 .h-max{
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -839,23 +848,14 @@ img {
 .h-screen{
   height: 100vh;
 }
-.h-full{
-  height: 100%;
-}
 .max-h-\[30vh\]{
   max-height: 30vh;
-}
-.max-h-\[375px\]{
-  max-height: 375px;
 }
 .max-h-\[400px\]{
   max-height: 400px;
 }
 .max-h-\[500px\]{
   max-height: 500px;
-}
-.max-h-\[300px\]{
-  max-height: 300px;
 }
 .min-h-\[250px\]{
   min-height: 250px;
@@ -1140,6 +1140,9 @@ img {
 }
 .list-outside{
   list-style-position: outside;
+}
+.list-disc{
+  list-style-type: disc;
 }
 .appearance-none{
   -webkit-appearance: none;
@@ -1759,6 +1762,9 @@ img {
 .border-t{
   border-top-width: 1px;
 }
+.border-t-4{
+  border-top-width: 4px;
+}
 .border-solid{
   border-style: solid;
 }
@@ -1786,6 +1792,10 @@ img {
 .border-gray-500{
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+.bg-\[\#F3F3F3\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 .bg-\[\#FBFBFB\]{
   --tw-bg-opacity: 1;
@@ -1932,6 +1942,10 @@ img {
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 .px-9{
   padding-left: 2.25rem;
@@ -2080,6 +2094,12 @@ img {
 }
 .font-extrabold{
   font-weight: 800;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.font-medium{
+  font-weight: 500;
 }
 .uppercase{
   text-transform: uppercase;
@@ -2658,7 +2678,10 @@ img {
 .home__testimonycard {
   width: min(90%, 380px);
   min-width: 270px;
-  aspect-ratio: 0.8;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  aspect-ratio: 0.95;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2674,6 +2697,15 @@ img {
           align-items: center;
   cursor: pointer;
   border-width: 1px;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 200ms;
+       -o-transition-duration: 200ms;
+          transition-duration: 200ms;
 }
 
 .home_testimonycard_inactive {
@@ -2688,15 +2720,7 @@ img {
           box-shadow: 1px 1px 20px rgb(221, 221, 221), -1px -1px 20px rgb(221, 221, 221);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-duration: 200ms;
-       -o-transition-duration: 200ms;
-          transition-duration: 200ms;
+  /* @apply transition-all duration-200 bg-white; */
 }
 
 .home_testimony_indicator_active{
@@ -2853,6 +2877,10 @@ img {
 }
 .green {
   outline: 2px solid green;
+}
+
+.color {
+  color: rgb(30, 30, 30);
 }
 
 /* --------------------------------------- */

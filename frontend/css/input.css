@@ -210,13 +210,14 @@ This declarations assumes that the generated css file lives in thesame directory
 .home__testimonycard {
   width: min(90%, 380px);
   min-width: 270px;
-  aspect-ratio: 0.8;
+  min-height: max-content;
+  aspect-ratio: 0.95;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  @apply border;
+  @apply border transition-all duration-200;
 }
 
 .home_testimonycard_inactive {
@@ -226,7 +227,8 @@ This declarations assumes that the generated css file lives in thesame directory
 
 .home_testimonycard_active {
   box-shadow: 1px 1px 20px rgb(221, 221, 221), -1px -1px 20px rgb(221, 221, 221);
-  @apply transition-all duration-200 bg-white;
+  @apply bg-white;
+  /* @apply transition-all duration-200 bg-white; */
 }
 
 .home_testimony_indicator_active {
@@ -337,6 +339,10 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 .green {
   outline: 2px solid green;
+}
+
+.color {
+  color: rgb(30, 30, 30);
 }
 
 /* --------------------------------------- */
