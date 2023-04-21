@@ -3,35 +3,40 @@ import { get, getAll } from "../utils.js";
 
 // dom
 const employerModal = get("#employer-modal");
+const employerForm = get("#employer-form");
+const employerFormBtn = get("button", employerForm);
 const allEmployerNavLink = getAll(`[data-name="employer-btn"]`);
 const allEmployerSidebarLink = getAll(`[data-name="sidebar-employer-btn"]`);
+
+const SuccessModalWrapper = get("#success-modal-wrapper");
+const SuccessModal = get("#success-modal");
 
 // variables
 const showModal = "employer_modal_open";
 const closeModal = "employer_modal_close";
 
 // func
-function handleModal() {
-  const status = employerModal.dataset.status;
+function handleModal(modalEl) {
+  const status = modalEl.dataset.status;
   if (status === "close") {
-    employerModal.classList.remove(closeModal);
-    employerModal.classList.add(showModal);
-    employerModal.dataset.status = "open";
+    modalEl.classList.remove(closeModal);
+    modalEl.classList.add(showModal);
+    modalEl.dataset.status = "open";
   } else {
-    employerModal.classList.remove(showModal);
-    employerModal.classList.add(closeModal);
-    employerModal.dataset.status = "close";
+    modalEl.classList.remove(showModal);
+    modalEl.classList.add(closeModal);
+    modalEl.dataset.status = "close";
   }
 }
 
 function handleModalFromSidebar() {
   handleSideBar();
-  handleModal();
+  handleModal(employerModal);
 }
 
 // events
 allEmployerNavLink.forEach((link) => {
-  link.addEventListener("click", handleModal);
+  link.addEventListener("click", () => handleModal(employerModal));
 });
 
 allEmployerSidebarLink.forEach((link) => {
@@ -39,5 +44,19 @@ allEmployerSidebarLink.forEach((link) => {
 });
 
 employerModal.addEventListener("click", (e) => {
-  if (e.target === employerModal) handleModal();
+  if (e.target === employerModal) handleModal(employerModal);
+});
+
+employerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  handleModal(SuccessModalWrapper);
+  console.log("I was submitted");
+});
+
+SuccessModalWrapper.addEventListener("click", (e) => {
+  if (e.target === SuccessModalWrapper) {
+    handleModal(SuccessModalWrapper);
+    console.log("Iw");
+  }
 });
