@@ -90,7 +90,7 @@ function htmlTestimony(testimony) {
                     />
                   </span>
 
-                  <div>
+                  <div class="text-center">
                     <p
                       class="font-semibold text-[var(--color-medium-blue)] text-[clamp(0.75rem,1.25vw,1rem)]"
                     >

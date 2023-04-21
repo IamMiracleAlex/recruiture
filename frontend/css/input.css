@@ -327,6 +327,17 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 /* --------------------------------------- */
+/*       Employer Modal specific css       */
+/* --------------------------------------- */
+.employer_modal_open {
+  @apply opacity-100 z-50;
+}
+
+.employer_modal_close {
+  @apply opacity-0 -z-10;
+}
+
+/* --------------------------------------- */
 /*           temporary debuggers           */
 /* --------------------------------------- */
 

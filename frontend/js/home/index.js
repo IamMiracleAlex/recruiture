@@ -183,7 +183,7 @@ leftArrow.addEventListener("click", prevTestimony);
 /*                Animatiosn               */
 /* --------------------------------------- */
 // dom
-const animateElements = getAll(`[data-name="animate"]`);
+const animateElements = getAll(`[data-animation="animate"]`);
 
 let options = {
   root: null,
