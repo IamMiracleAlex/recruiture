@@ -72,5 +72,4 @@ SuccessModalWrapper.addEventListener("click", (e) => {
 
 SuccessModalBtn.addEventListener("click", () => {
   location.assign("/");
-  console.log("i was clickes at success btn");
 });
