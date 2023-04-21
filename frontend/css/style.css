@@ -639,17 +639,11 @@ img {
 .right-0{
   right: 0px;
 }
-.right-\[-100px\]{
-  right: -100px;
-}
 .right-\[20px\]{
   right: 20px;
 }
 .top-0{
   top: 0px;
-}
-.right-\[100px\]{
-  right: 100px;
 }
 .isolate{
   isolation: isolate;
@@ -703,10 +697,6 @@ img {
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 .my-5{
   margin-top: 1.25rem;
@@ -867,9 +857,6 @@ img {
 .max-h-\[500px\]{
   max-height: 500px;
 }
-.max-h-\[600px\]{
-  max-height: 600px;
-}
 .min-h-\[250px\]{
   min-height: 250px;
 }
@@ -902,8 +889,8 @@ img {
   width: -moz-max-content;
   width: max-content;
 }
-.w-\[95\%\]{
-  width: 95%;
+.w-screen{
+  width: 100vw;
 }
 .max-w-3xl{
   max-width: 48rem;
@@ -920,11 +907,11 @@ img {
 .max-w-\[400px\]{
   max-width: 400px;
 }
-.max-w-\[525px\]{
-  max-width: 525px;
-}
 .max-w-\[830px\]{
   max-width: 830px;
+}
+.max-w-\[min\(97\%\2c 525px\)\]{
+  max-width: min(97%,525px);
 }
 .max-w-md{
   max-width: 28rem;
@@ -1814,6 +1801,9 @@ img {
 .border-gray-500{
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+.bg-\[\#00182ED9\]{
+  background-color: #00182ED9;
 }
 .bg-\[\#F3F3F3\]{
   --tw-bg-opacity: 1;
@@ -2897,6 +2887,19 @@ img {
 }
 
 /* --------------------------------------- */
+/*       Employer Modal specific css       */
+/* --------------------------------------- */
+.employer_modal_open{
+  z-index: 50;
+  opacity: 1;
+}
+
+.employer_modal_close{
+  z-index: -10;
+  opacity: 0;
+}
+
+/* --------------------------------------- */
 /*           temporary debuggers           */
 /* --------------------------------------- */
 
@@ -3125,6 +3128,9 @@ img {
   }
 }
 @media (min-width: 768px){
+  .md\:absolute{
+    position: absolute;
+  }
   .md\:bottom-0{
     bottom: 0px;
   }
@@ -3158,6 +3164,9 @@ img {
   .md\:h-\[unset\]{
     height: unset;
   }
+  .md\:h-full{
+    height: 100%;
+  }
   .md\:h-screen{
     height: 100vh;
   }
@@ -3179,13 +3188,16 @@ img {
   .md\:w-\[80\%\]{
     width: 80%;
   }
+  .md\:w-full{
+    width: 100%;
+  }
   .md\:w-max{
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
-  .md\:w-full{
-    width: 100%;
+  .md\:max-w-2xl{
+    max-width: 42rem;
   }
   .md\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));

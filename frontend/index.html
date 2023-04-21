@@ -13,6 +13,7 @@
     <title>Recruiture | Edubridge Academy</title>
     <script type="module" src="./js/home/index.js" defer></script>
     <script type="module" src="./js/sidebar/sidebar.js"></script>
+    <script type="module" src="./js/employer/employer.js"></script>
   </head>
 
   <body>
@@ -75,11 +76,12 @@
         </li>
 
         <li>
-          <a
+          <button
+            data-name="employer-btn"
             class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
-            href="./html/employer.html"
-            >Employer</a
           >
+            Employer
+          </button>
         </li>
 
         <li>
@@ -152,11 +154,12 @@
         </li>
 
         <li>
-          <a
+          <button
+            data-name="sidebar-employer-btn"
             class="text-[clamp(16px,2vw,22px)] text-[var(--color-dark-blue)] hover:text-[var(--color-dark-green)] tracking-wide"
-            href="./html/employer.html"
-            ><i class="bi bi-envelope-paper"></i> &nbsp; Employer</a
           >
+            <i class="bi bi-envelope-paper"></i> &nbsp; Employer
+          </button>
         </li>
 
         <li>
@@ -184,11 +187,12 @@
           >
         </li>
         <li>
-          <a
+          <button
+            data-name="sidebar-employer-btn"
             class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
-            href="./html/employer.html"
-            >Hire a Talent</a
           >
+            Hire a Talent
+          </button>
         </li>
       </ul>
 
@@ -246,6 +250,105 @@
               >+234 906 066 6278</a
             >
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Employer Modal section-->
+    <section
+      id="employer-modal"
+      data-status="close"
+      class="employer_modal_close transition-opacity duration-200 ease-out fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 bg-[#00182ED9]"
+    >
+      <!-- employer modal -->
+      <div
+        class="relative flex flex-col md:flex-row justify-center items-center w-screen max-w-[min(97%,525px)] md:w-full md:h-full md:max-h-[600px] md:max-w-2xl lg:max-w-[1000px] mx-auto md:my-16 rounded-3xl overflow-hidden"
+      >
+        <!-- ----------right image wrapper ---------- -->
+        <div class="w-full h-full md:max-h-[600px] hidden md:block">
+          <img
+            class="h-full md:max-h-[600px]"
+            src="./asssets/employer/employer-form-image-one.png"
+            alt=""
+          />
+        </div>
+
+        <!-- -----------left bg wrapper ----------- -->
+        <div
+          class="bg-[#F3F3F3] h-full md:max-h-[600px] w-full hidden md:block"
+        ></div>
+
+        <!-- form wrapper -->
+        <div
+          class="bg-[#FBFBFB] rounded-3xl md:absolute max-w-[min(97%,525px)] w-full md:right-[100px] px-5 py-7 sm:px-10"
+        >
+          <!-- form header  -->
+          <div>
+            <h3
+              class="font-satoshi-bold text-[clamp(1.125rem,2.1vw,2rem)] text-[var(--color-medium-blue)] leading-6"
+            >
+              Employer Form
+            </h3>
+            <small class="text-[var(--color-medium-blue)]">
+              Fill out these details to get started
+            </small>
+          </div>
+
+          <!-- form fields -->
+          <form>
+            <!-- first name -->
+            <article class="mt-7">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="First name"
+                name="firstName"
+                type="text"
+              />
+            </article>
+
+            <!-- second name -->
+            <article class="mt-4">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="Surname"
+                name="surname"
+                type="text"
+              />
+            </article>
+
+            <!-- company name -->
+            <article class="mt-4">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="Company"
+                name="company"
+                type="text"
+              />
+            </article>
+
+            <!-- company name -->
+            <article class="mt-4">
+              <input
+                class="w-full rounded-lg p-3"
+                placeholder="Email"
+                name="email"
+                type="email"
+              />
+            </article>
+
+            <!-- company name -->
+            <article class="mt-4">
+              <select class="w-full rounded-lg p-3" name="role">
+                <option value="">Role you are recruiting for</option>
+              </select>
+            </article>
+
+            <button
+              class="w-full text-white text-center bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] p-3 mt-7 rounded-lg"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </section>

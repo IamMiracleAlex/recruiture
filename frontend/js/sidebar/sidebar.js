@@ -35,3 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
     sideBar.classList.remove("invisible");
   }, 200);
 });
+
+export default handleSideBar;
