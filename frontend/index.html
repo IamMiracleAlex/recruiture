@@ -103,7 +103,7 @@
         >
 
         <a
-          class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
+          class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-white hover:text-[var(--color-dark-green)] border-2 border-[var(--color-dark-green)] hover:border-gray-500 text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
           href="#"
           >Hire a Talent</a
         >
@@ -254,11 +254,11 @@
       </div>
     </section>
 
-    <!-- Employer Modal section-->
+    <!-- ------ Employer Modal section ------ -->
     <section
       id="employer-modal"
       data-status="close"
-      class="employer_modal_close transition-opacity duration-200 ease-out fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 bg-[#00182ED9]"
+      class="employer_modal_close transition-opacity duration-300 ease-out fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 bg-[#00182ED9]"
     >
       <!-- employer modal -->
       <div
@@ -374,14 +374,14 @@
             class="flex flex-col justify-center items-center w-full max-w-[1000px] mx-auto text-white text-center px-5 py-10 md:px-10 md:py-0 md:h-[calc(100vh-200px)] h-max"
           >
             <h1
-              data-name="animate"
+              data-animation="animate"
               class="home_blur_animate animation text-[clamp(25px,3.5vw,64px)] leading-[clamp(2rem,4vw,64px)] font-satoshi-black tracking-normal"
             >
               Your organization is one talent away from optimum
               <span class="text-[var(--color-light-green)]">performance</span>
             </h1>
             <p
-              data-name="animate"
+              data-animation="animate"
               class="home_blur_animate animation text-[clamp(15px,1.5vw,20px)] text-[rgba(255,255,255,0.8)] mt-3 sm:mt-5 mx-auto"
             >
               Recruiture will help you onboard the best trained talents in the
@@ -389,7 +389,8 @@
             </p>
 
             <button
-              data-name="animate"
+              data-name="employer-btn"
+              data-animation="animate"
               class="home_blur_animate animation flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5"
             >
               Get started
@@ -399,7 +400,7 @@
           <!-- banner boxes/counters -->
           <div
             id="counter"
-            data-name="animate"
+            data-animation="animate"
             class="home_scaleout_animate animation home__card__shadow min-h-[250px] md:w-[80%] max-w-[1024px] mx-auto bg-white h-max p-2"
           >
             <div class="flex">
@@ -483,7 +484,7 @@
         <div class="mx-auto max-w-6xl">
           <!-- heading (Our services) -->
           <p
-            data-name="animate"
+            data-animation="animate"
             class="home_slide_left animation bg-[rgba(17,47,73,0.03)] py-2 px-9 mt-5 xl:mt-10 w-max rounded-[40px] font-satoshi-bold text-[clamp(1.25rem,2.7vw,2.5rem)] text-[var(--color-medium-blue)]"
           >
             Our services
@@ -495,7 +496,7 @@
           >
             <!-- text-wrapper -->
             <div
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_left animation flex flex-col justify-center items-start order-1 sm:w-[50%]"
             >
               <h3
@@ -516,7 +517,7 @@
             </div>
             <!-- image wrapper -->
             <div
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_right animation order-2 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
             >
               <img src="./asssets/home/home-ourservices-image1.png" alt="" />
@@ -529,7 +530,7 @@
           >
             <!-- text-wrapper -->
             <div
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_right animation flex flex-col justify-center items-start order-1 sm:order-2 sm:w-[50%]"
             >
               <h3
@@ -551,7 +552,7 @@
             </div>
             <!-- image wrapper -->
             <div
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_left animation order-2 sm:order-1 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
             >
               <img src="./asssets/home/home-ourservices-image2.png" alt="" />
@@ -564,7 +565,7 @@
           >
             <!-- text-wrapper -->
             <div
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_left animation flex flex-col justify-center items-start order-1 sm:w-[50%]"
             >
               <h3
@@ -585,7 +586,7 @@
 
             <!-- image wrapper -->
             <div
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_right animation order-2 sm:max-w-[505px] max-h-[400px] sm:max-h-[607px] sm:w-[43%] aspect-video sm:aspect-[0.86]"
             >
               <img src="./asssets/home/home-ourservices-image3.png" alt="" />
@@ -602,7 +603,7 @@
         <div class="mx-auto max-w-6xl">
           <!-- heading (Our Value Proposition) -->
           <p
-            data-name="animate"
+            data-animation="animate"
             class="home_slide_left animation bg-[rgba(17,47,73,0.03)] py-2 px-9 w-max rounded-[40px] font-satoshi-bold text-[clamp(1.25rem,2.7vw,2.5rem)] text-[var(--color-medium-blue)]"
           >
             Our Value Proposition
@@ -612,7 +613,7 @@
           <div class="flex flex-col sm:flex-row w-full sm:gap-6 lg:gap-14">
             <!-- our values card 1 -->
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_left animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
@@ -647,7 +648,7 @@
 
             <!-- our values card 2 -->
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_right animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
@@ -685,7 +686,7 @@
           <div class="flex flex-col sm:flex-row w-full sm:gap-6 lg:gap-14">
             <!-- our values card 3 -->
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_left animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
@@ -720,7 +721,7 @@
 
             <!-- our values card 4 -->
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_right animation flex justify-center flex-col aspect-[1.3] mt-14 sm:w-[50%] bg-white rounded-3xl p-5 lg:p-7"
             >
               <!-- icon wrap -->
@@ -758,7 +759,7 @@
 
       <!-- --------- Trusted partners --------- -->
       <section
-        data-name="animate"
+        data-animation="animate"
         class="home_slide_bottom animation bg-[#FDFDFD] py-10"
       >
         <!-- trusted partners wrap -->
@@ -928,7 +929,7 @@
         <div class="max-w-6xl mx-auto relative z-10">
           <!-- heading (our testimonials) -->
           <h3
-            data-name="animate"
+            data-animation="animate"
             class="home_blur_animate animation font-satoshi-bold text-[var(--color-light-blue)] text-center text-[clamp(1.25rem,2.7vw,2.5rem)]"
           >
             Our Testimonials
@@ -936,7 +937,7 @@
 
           <!-- sub heading (...) -->
           <p
-            data-name="animate"
+            data-animation="animate"
             class="home_blur_animate animation text-center text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5rem,2vw,3rem)] mx-auto max-w-3xl mt-9"
           >
             We have transformed the lives of several employers as well as job
@@ -945,7 +946,7 @@
 
           <!-- testimonials wrap -->
           <div
-            data-name="animate"
+            data-animation="animate"
             class="home_scaleout_animate animation home__testimony mt-16 h-max relative flex justify-center items-center overflow-hidden bg-white border-x"
           >
             <!-- buttons left arrow -->
@@ -1038,7 +1039,7 @@
         <div class="max-w-6xl mx-auto">
           <!-- heading (learn more about us) -->
           <div
-            data-name="animate"
+            data-animation="animate"
             class="home_blur_animate animation max-w-[830px] mx-auto"
           >
             <h3
@@ -1062,7 +1063,7 @@
           >
             <!-- blog card -->
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_bottom animation max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
               <!-- image and image overlay -->
@@ -1129,7 +1130,7 @@
             </article>
 
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_bottom animation max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
               <!-- image and image overlay -->
@@ -1196,7 +1197,7 @@
             </article>
 
             <article
-              data-name="animate"
+              data-animation="animate"
               class="home_slide_bottom animation max-w-[400px] mx-auto min-[525px]:mx-[unset] min-[525px]:max-w-[unset] cursor-pointer rounded-3xl border-[0.5px] border-[rgba(11,28,44,0.2)] group"
             >
               <!-- image and image overlay -->
@@ -1267,12 +1268,12 @@
 
       <!-- ---------- Get certified ----------- -->
       <section
-        data-name="animate"
+        data-animation="animate"
         class="home_slide_bottom animation home_getcertified_bg flex-col flex justify-center items-center py-10 w-full aspect-video max-h-[30vh]"
       >
         <div class="max-w-[830px] mx-auto">
           <h3
-            data-name="animate"
+            data-animation="animate"
             class="home_blur_animate animation font-satoshi-black text-white text-center text-[clamp(1.25rem,2.7vw,2.5rem)] leading-tight sm:w-[80%] lg:w-auto mx-auto"
           >
             Are you an undergraduate, recent graduate or a working professional?
@@ -1287,11 +1288,12 @@
             employability and productivity.
           </p>
 
-          <button
-            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5 mx-auto"
+          <a
+            href="https://edubridgeacademy.com/"
+            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-3 px-9 sm:px-12 rounded-md mt-5 max-w-[230px] mx-auto"
           >
-            Get started
-          </button>
+            Get certified
+          </a>
         </div>
       </section>
     </main>
@@ -1332,10 +1334,11 @@
               >Blog</a
             >
             <a
-              class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
-              href="./html/employer.html"
-              >Employer</a
+              data-name="employer-btn"
+              class="cursor-pointer font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
             >
+              Employer
+            </a>
             <a
               class="font-switzer-reg text-[rgba(11,28,44,0.7)] text-[clamp(1rem,1.2vw,1.2rem)] max-w-md"
               href="#testimonials"
