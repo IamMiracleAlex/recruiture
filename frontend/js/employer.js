@@ -8,11 +8,11 @@ function get(name, from = document) {
 
 function getAll(name, from = document) {
   if (from.querySelectorAll(name)) return [...from.querySelectorAll(name)];
-
   return [];
 }
 
 // dom
+const sideBar = get(`[data-name="side_bar"]`);
 const employerModal = get("#employer-modal");
 const employerForm = get("#employer-form");
 const allEmployerNavLink = getAll(`[data-name="employer-btn"]`);
@@ -26,7 +26,6 @@ const SuccessModalBtn = get("button", SuccessModal);
 const showModal = "employer_modal_open";
 const closeModal = "employer_modal_close";
 
-// func
 // functions
 function handleSideBar() {
   const status = sideBar.dataset.status;
