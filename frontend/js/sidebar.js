@@ -6,6 +6,11 @@ function get(name, from = document) {
   throw new Error(`The specified element ${name} was not found`);
 }
 
+function getAll(name, from = document) {
+  if (from.querySelectorAll(name)) return [...from.querySelectorAll(name)];
+  return [];
+}
+
 // Dom elements
 const sideBar = get(`[data-name="side_bar"]`);
 const sideBarButton = get(`[data-name="side_bar_button"]`);

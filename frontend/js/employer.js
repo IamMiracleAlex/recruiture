@@ -1,18 +1,6 @@
-/* --------------------------------------- */
-/*              Dom Helpers                */
-/* --------------------------------------- */
-function get(name, from = document) {
-  if (from.querySelector(name)) return from.querySelector(name);
-  throw new Error(`The specified element ${name} was not found`);
-}
-
-function getAll(name, from = document) {
-  if (from.querySelectorAll(name)) return [...from.querySelectorAll(name)];
-  return [];
-}
+// Both the get and getAll functions are declared in the sideBar.js
 
 // dom
-const sideBar = get(`[data-name="side_bar"]`);
 const employerModal = get("#employer-modal");
 const employerForm = get("#employer-form");
 const allEmployerNavLink = getAll(`[data-name="employer-btn"]`);
@@ -27,19 +15,6 @@ const showModal = "employer_modal_open";
 const closeModal = "employer_modal_close";
 
 // functions
-function handleSideBar() {
-  const status = sideBar.dataset.status;
-  if (status === "close") {
-    sideBar.dataset.status = "open";
-    sideBar.classList.add(openSideBar);
-    sideBar.classList.remove(closeSideBar);
-  } else {
-    sideBar.dataset.status = "close";
-    sideBar.classList.remove(openSideBar);
-    sideBar.classList.add(closeSideBar);
-  }
-}
-
 function handleModal(modalEl) {
   const status = modalEl.dataset.status;
   if (status === "close") {
@@ -54,7 +29,7 @@ function handleModal(modalEl) {
 }
 
 function handleModalFromSidebar() {
-  handleSideBar();
+  handleSideBar(); //func declared in sidebar.js
   handleModal(employerModal);
 }
 
