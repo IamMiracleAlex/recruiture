@@ -10,8 +10,8 @@
       href="../asssets/recruiture-logo-svg.svg"
       type="image/x-icon"
     />
-    <script type="module" src="../js/sidebar/sidebar.js"></script>
-    <script type="module" src="../js/employer/employer.js"></script>
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/employer.js" defer></script>
     <title>Blog - Recruiture | Edubridge Academy</title>
   </head>
   <body>
@@ -185,11 +185,12 @@
           >
         </li>
         <li>
-          <a
-            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md"
-            href="./employer.html"
-            >Hire a Talent</a
+          <button
+            data-name="sidebar-employer-btn"
+            class="flex justify-center items-center transition-colors duration-200 bg-[var(--color-dark-green)] hover:bg-[var(--color-medium-green)] text-[clamp(16px,2vw,20px)] text-white tracking-wide py-2 px-3 rounded-md w-full"
           >
+            Hire a Talent
+          </button>
         </li>
       </ul>
 

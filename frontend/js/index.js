@@ -18,8 +18,60 @@ function getAll(name, from = document) {
 }
 
 /* --------------------------------------- */
+/*             Banner Counters             */
+/* --------------------------------------- */
+// dom
+const counterWrapper = get("#counter");
+const counters = getAll(`[data-name="counter"]`);
+
+// functions
+const counterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        handleCounters();
+        observer.unobserve(counterWrapper);
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.65,
+  }
+);
+
+counterObserver.observe(counterWrapper);
+
+function renderCount(counter, number) {
+  if (!counter) return;
+  const addition = number / 100;
+  counter.textContent = 0;
+
+  let init = 0;
+  const interval = setInterval(() => {
+    init += addition;
+    if (init >= number) clearInterval(interval);
+    counter.textContent = Math.min(Math.ceil(init), number);
+  }, 50);
+}
+
+function handleCounters() {
+  counters.forEach((counter) => {
+    const number = parseInt(counter.dataset.value) || 0;
+    renderCount(counter, number);
+  });
+}
+
+/* --------------------------------------- */
 /*               Testimonials              */
 /* --------------------------------------- */
+// Dom elements
+const testimonyWrapper = get(`[data-name="testimonyWrapper"]`); //testimonies parent wrapper
+const indicatorWrapper = get(`[data-name="indicatorWrapper"]`); //circular btn wrapper
+const leftArrow = get(`[data-name="leftArrow"]`); //left arrow btn
+const rightArrow = get(`[data-name="rightArrow"]`); //right arrow btn
+
 // data
 const testimonials = [
   {
@@ -80,7 +132,7 @@ const testimonials = [
   },
 ];
 
-// html
+// html spitting funcs
 function htmlIndicatorBtn() {
   return `
       <span
@@ -125,61 +177,6 @@ function htmlTestimony(testimony) {
               </article>
     `;
 }
-
-/* --------------------------------------- */
-/*             Banner Counters             */
-/* --------------------------------------- */
-// dom
-const counterWrapper = get("#counter");
-const counters = getAll(`[data-name="counter"]`);
-
-// functions
-const counterObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        handleCounters();
-        observer.unobserve(counterWrapper);
-      }
-    });
-  },
-  {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.65,
-  }
-);
-
-counterObserver.observe(counterWrapper);
-
-function renderCount(counter, number) {
-  if (!counter) return;
-  const addition = number / 100;
-  counter.textContent = 0;
-
-  let init = 0;
-  const interval = setInterval(() => {
-    init += addition;
-    if (init >= number) clearInterval(interval);
-    counter.textContent = Math.min(Math.ceil(init), number);
-  }, 50);
-}
-
-function handleCounters() {
-  counters.forEach((counter) => {
-    const number = parseInt(counter.dataset.value) || 0;
-    renderCount(counter, number);
-  });
-}
-
-/* --------------------------------------- */
-/*               Testimonials              */
-/* --------------------------------------- */
-// Dom elements
-const testimonyWrapper = get(`[data-name="testimonyWrapper"]`); //testimonies parent wrapper
-const indicatorWrapper = get(`[data-name="indicatorWrapper"]`); //circular btn wrapper
-const leftArrow = get(`[data-name="leftArrow"]`); //left arrow btn
-const rightArrow = get(`[data-name="rightArrow"]`); //right arrow btn
 
 // variables
 let currentCard;
@@ -334,33 +331,3 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 });
-
-/**
- *
- *   let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-  };
-
-  const observerHandler = (entries, observer) => {
-    entries.forEach((entry) => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-  setActiveTestimony(allTestimonies[2], allIndicatorBtn[2], "center");
-        observer.unobserve(testimonyWrapper);
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(observerHandler, options);
-  observer.observe(testimonyWrapper);
- */
-
-// {
-//   new Date(post._createdAt).toLocaleDateString("en-US", {
-//     day: "numeric",
-//     month: "long",
-//     year: "numeric",
-//   });
-// }
