@@ -338,6 +338,13 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 /* --------------------------------------- */
+/*          blog page specific css         */
+/* --------------------------------------- */
+.blog__shadow {
+  box-shadow: rgb(129 171 37/20%) 0 0 28px;
+}
+
+/* --------------------------------------- */
 /*           temporary debuggers           */
 /* --------------------------------------- */
 
@@ -353,7 +360,7 @@ This declarations assumes that the generated css file lives in thesame directory
 }
 
 .color {
-  color: rgb(30, 30, 30);
+  color: rgb(129, 171, 37);
 }
 
 /* --------------------------------------- */

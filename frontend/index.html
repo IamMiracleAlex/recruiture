@@ -112,6 +112,7 @@
 
     <!-- ------------- SideBar -------------- -->
     <section
+      aria-modal="true"
       data-status="close"
       data-name="side_bar"
       class="sidebar__close transition-transform duration-200 ease-linear md:hidden w-full h-screen z-50 fixed top-0 left-0 bottom-0 bg-white max-w-md invisible"
@@ -256,6 +257,7 @@
 
     <!-- ------ Employer Modal section ------ -->
     <section
+      aria-modal="true"
       id="employer-modal"
       data-status="close"
       class="employer_modal_close transition-opacity duration-300 ease-out fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 bg-[#00182ED9]"
@@ -408,7 +410,7 @@
 
     <main class="overflow-hidden">
       <!-- -------------- Banner -------------- -->
-      <section class="relative h-max md:h-screen">
+      <section role="banner" class="relative h-max md:h-screen">
         <!-- banner image wrapper -->
         <div
           aria-hidden="true"
